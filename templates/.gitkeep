@@ -1,0 +1,3 @@
+# templates/
+# Готові HTML email-шаблони для Merino CA (кампанії, флоу, транзакційні).
+# Один файл = один лист. Назва: <тип>-<назва>.html, напр. welcome-01.html, abandoned-cart.html
