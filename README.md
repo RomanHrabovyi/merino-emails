@@ -23,9 +23,23 @@ email-safe компоненти (hero, CTA, product card, соцдоказ то�
 Claude Code автоматично підхоплює скіл і використовує його щоразу, коли треба зверстати лист.
 
 ### `templates/`
-Готові HTML email-шаблони. Один файл — один лист. Рекомендована назва: `<тип>-<назва>.html`
-(напр. `welcome-01.html`, `abandoned-cart.html`). Email-safe: табличний лейаут, інлайн-стилі,
+Готові HTML email-шаблони. Один файл — один лист. Email-safe: табличний лейаут, інлайн-стилі,
 mobile-first, Klaviyo-теги на місці.
+
+**Неймінг** — щоб порядок було видно одразу:
+- **Флоу** (послідовність листів): `<flow>-NN-<назва>.html` з двозначним номером кроку, напр.
+  `welcome-01-intro.html`, `welcome-02-brand-story.html`, `welcome-03-bestsellers.html`.
+- **Кампанії** (разові, поза флоу): `campaign-<назва>.html`, напр. `campaign-black-friday.html`.
+- **Транзакційні**: `transactional-<назва>.html`.
+
+Поточні шаблони:
+
+| Файл | Що це |
+|---|---|
+| `welcome-01-intro.html` | Welcome flow #1 — вітання + промокод 20% |
+| `welcome-02-brand-story.html` | Welcome flow #2 — brand story / why merino |
+| `welcome-03-bestsellers.html` | Welcome flow #3 — social proof + bestsellers |
+| `campaign-black-friday.html` | Кампанія — Black Friday 30% |
 
 ### `references/`
 Референс-скріни або фото інших листів. З них беремо **лише структуру й композицію**
