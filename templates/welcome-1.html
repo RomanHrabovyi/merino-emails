@@ -6,13 +6,13 @@
 <meta name="x-apple-disable-message-reformatting">
 <title>{{ organization.name }}</title>
 <!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
+<!-- NOTE: Klaviyo HTML blocks strip <head>/<style>. This email is built to render correctly on INLINE styles alone; the media query below is a progressive enhancement only. -->
 <style>
   @media only screen and (max-width:600px){
     .container{width:100%!important}
     .px{padding-left:20px!important;padding-right:20px!important}
     .py{padding-top:24px!important;padding-bottom:24px!important}
-    .stack{display:block!important;width:100%!important}
-    .thumb{width:33.33%!important}
+    .stack{display:block!important;width:100%!important;padding-left:0!important;padding-right:0!important}
     .h1{font-size:26px!important}
   }
   a{color:#C16452;text-decoration:underline}
@@ -23,7 +23,7 @@
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;">Your code&rsquo;s ready. Softer, warmer, odor-free merino.</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#EFEAE0;">
   <tr><td align="center" style="padding:24px 12px;">
-    <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:600px;background:#FFFFFF;">
+    <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#FFFFFF;">
 
       <!-- ============ HERO — WELCOME ============ -->
       <tr><td class="px py" style="padding:40px 24px;background:#F4F1EA;" align="center">
@@ -46,7 +46,7 @@
         <!-- CTA (rust) -->
         <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
           <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/all" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;"><![endif]-->
-          <a href="https://merinotech.ca/collections/all" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;width:240px;">Shop now &rarr;</a>
+          <a href="https://merinotech.ca/collections/all" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Shop now &rarr;</a>
           <!--[if mso]></center></v:roundrect><![endif]-->
         </td></tr></table>
         <p style="margin:16px 0 0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;color:#9A948A;">Valid on your first order. [Terms placeholder.]*</p>
@@ -103,27 +103,27 @@
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E3DED4;border-radius:8px;">
           <tr><td style="padding:16px;">
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-              <td class="thumb stack" width="33.33%" style="padding:6px;" align="center"><img src="https://placehold.co/150x150/F7F7F8/9A948A?text=TOP" width="150" alt="Merino base layer top" style="display:block;width:100%;max-width:150px;border:0;border-radius:6px;"></td>
-              <td class="thumb stack" width="33.33%" style="padding:6px;" align="center"><img src="https://placehold.co/150x150/F7F7F8/9A948A?text=BOTTOM" width="150" alt="Merino base layer bottom" style="display:block;width:100%;max-width:150px;border:0;border-radius:6px;"></td>
-              <td class="thumb stack" width="33.33%" style="padding:6px;" align="center"><img src="https://placehold.co/150x150/F7F7F8/9A948A?text=SOCKS" width="150" alt="Merino socks" style="display:block;width:100%;max-width:150px;border:0;border-radius:6px;"></td>
+              <td width="33.33%" style="padding:6px;" align="center"><img src="https://placehold.co/150x150/F7F7F8/9A948A?text=TOP" width="150" alt="Merino base layer top" style="display:block;width:100%;max-width:150px;border:0;border-radius:6px;"></td>
+              <td width="33.33%" style="padding:6px;" align="center"><img src="https://placehold.co/150x150/F7F7F8/9A948A?text=BOTTOM" width="150" alt="Merino base layer bottom" style="display:block;width:100%;max-width:150px;border:0;border-radius:6px;"></td>
+              <td width="33.33%" style="padding:6px;" align="center"><img src="https://placehold.co/150x150/F7F7F8/9A948A?text=SOCKS" width="150" alt="Merino socks" style="display:block;width:100%;max-width:150px;border:0;border-radius:6px;"></td>
             </tr></table>
           </td></tr>
         </table>
       </td></tr>
-      <!-- dual CTA: women / men -->
-      <tr><td class="px" style="padding:4px 24px 32px;background:#FFFFFF;" align="center">
-        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr>
-          <td class="stack" style="padding:0 6px 10px;" align="center">
-            <table role="presentation" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
-              <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/women-sets" style="height:46px;v-text-anchor:middle;width:200px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;"><![endif]-->
-              <a href="https://merinotech.ca/collections/women-sets" style="background:#232323;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;line-height:46px;text-align:center;text-decoration:none;width:200px;">Shop women&rsquo;s</a>
+      <!-- dual CTA: women / men (fluid, no fixed px overflow) -->
+      <tr><td class="px" style="padding:4px 24px 32px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td class="stack" width="50%" valign="top" style="padding:0 6px 10px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
+              <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/women-sets" style="height:46px;v-text-anchor:middle;width:255px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;"><![endif]-->
+              <a href="https://merinotech.ca/collections/women-sets" style="background:#232323;border-radius:4px;color:#FFFFFF;display:block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;line-height:46px;text-align:center;text-decoration:none;">Shop women&rsquo;s</a>
               <!--[if mso]></center></v:roundrect><![endif]-->
             </td></tr></table>
           </td>
-          <td class="stack" style="padding:0 6px 10px;" align="center">
-            <table role="presentation" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
-              <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/men-merino-wool-base-layer-sets" style="height:46px;v-text-anchor:middle;width:200px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;"><![endif]-->
-              <a href="https://merinotech.ca/collections/men-merino-wool-base-layer-sets" style="background:#232323;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;line-height:46px;text-align:center;text-decoration:none;width:200px;">Shop men&rsquo;s</a>
+          <td class="stack" width="50%" valign="top" style="padding:0 6px 10px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
+              <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/men-merino-wool-base-layer-sets" style="height:46px;v-text-anchor:middle;width:255px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;"><![endif]-->
+              <a href="https://merinotech.ca/collections/men-merino-wool-base-layer-sets" style="background:#232323;border-radius:4px;color:#FFFFFF;display:block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;line-height:46px;text-align:center;text-decoration:none;">Shop men&rsquo;s</a>
               <!--[if mso]></center></v:roundrect><![endif]-->
             </td></tr></table>
           </td>
@@ -144,27 +144,27 @@
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E3DED4;border-radius:8px;background:#FFFFFF;">
           <tr><td style="padding:16px;">
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-              <td class="thumb stack" width="33.33%" style="padding:6px;" align="center"><img src="https://placehold.co/150x150/F7F7F8/9A948A?text=LONG+SLEEVE" width="150" alt="Merino long sleeve" style="display:block;width:100%;max-width:150px;border:0;border-radius:6px;"></td>
-              <td class="thumb stack" width="33.33%" style="padding:6px;" align="center"><img src="https://placehold.co/150x150/F7F7F8/9A948A?text=HOODIE" width="150" alt="Merino hoodie" style="display:block;width:100%;max-width:150px;border:0;border-radius:6px;"></td>
-              <td class="thumb stack" width="33.33%" style="padding:6px;" align="center"><img src="https://placehold.co/150x150/F7F7F8/9A948A?text=HALF+ZIP" width="150" alt="Merino half-zip" style="display:block;width:100%;max-width:150px;border:0;border-radius:6px;"></td>
+              <td width="33.33%" style="padding:6px;" align="center"><img src="https://placehold.co/150x150/F7F7F8/9A948A?text=LONG+SLEEVE" width="150" alt="Merino long sleeve" style="display:block;width:100%;max-width:150px;border:0;border-radius:6px;"></td>
+              <td width="33.33%" style="padding:6px;" align="center"><img src="https://placehold.co/150x150/F7F7F8/9A948A?text=HOODIE" width="150" alt="Merino hoodie" style="display:block;width:100%;max-width:150px;border:0;border-radius:6px;"></td>
+              <td width="33.33%" style="padding:6px;" align="center"><img src="https://placehold.co/150x150/F7F7F8/9A948A?text=HALF+ZIP" width="150" alt="Merino half-zip" style="display:block;width:100%;max-width:150px;border:0;border-radius:6px;"></td>
             </tr></table>
           </td></tr>
         </table>
       </td></tr>
       <!-- dual CTA: women / men -->
-      <tr><td class="px" style="padding:4px 24px 32px;background:#F4F1EA;" align="center">
-        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr>
-          <td class="stack" style="padding:0 6px 10px;" align="center">
-            <table role="presentation" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
-              <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/women-long-sleeves" style="height:46px;v-text-anchor:middle;width:200px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;"><![endif]-->
-              <a href="https://merinotech.ca/collections/women-long-sleeves" style="background:#232323;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;line-height:46px;text-align:center;text-decoration:none;width:200px;">Shop women&rsquo;s</a>
+      <tr><td class="px" style="padding:4px 24px 32px;background:#F4F1EA;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td class="stack" width="50%" valign="top" style="padding:0 6px 10px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
+              <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/women-long-sleeves" style="height:46px;v-text-anchor:middle;width:255px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;"><![endif]-->
+              <a href="https://merinotech.ca/collections/women-long-sleeves" style="background:#232323;border-radius:4px;color:#FFFFFF;display:block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;line-height:46px;text-align:center;text-decoration:none;">Shop women&rsquo;s</a>
               <!--[if mso]></center></v:roundrect><![endif]-->
             </td></tr></table>
           </td>
-          <td class="stack" style="padding:0 6px 10px;" align="center">
-            <table role="presentation" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
-              <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/men-long-sleeves" style="height:46px;v-text-anchor:middle;width:200px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;"><![endif]-->
-              <a href="https://merinotech.ca/collections/men-long-sleeves" style="background:#232323;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;line-height:46px;text-align:center;text-decoration:none;width:200px;">Shop men&rsquo;s</a>
+          <td class="stack" width="50%" valign="top" style="padding:0 6px 10px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
+              <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/men-long-sleeves" style="height:46px;v-text-anchor:middle;width:255px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;"><![endif]-->
+              <a href="https://merinotech.ca/collections/men-long-sleeves" style="background:#232323;border-radius:4px;color:#FFFFFF;display:block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;line-height:46px;text-align:center;text-decoration:none;">Shop men&rsquo;s</a>
               <!--[if mso]></center></v:roundrect><![endif]-->
             </td></tr></table>
           </td>
@@ -177,18 +177,18 @@
         <img src="https://placehold.co/552x300/F4F1EA/9A948A?text=THE+FINISHING+TOUCHES" width="552" alt="Merino accessories" style="display:block;width:100%;max-width:552px;border:0;border-radius:8px;margin-bottom:20px;">
         <h2 style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">The finishing touches</h2>
         <p style="margin:0 0 20px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">[Placeholder] Small things that keep the warmth in &mdash; merino socks and beanies for everyone.</p>
-        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr>
-          <td class="stack" style="padding:0 6px 10px;" align="center">
-            <table role="presentation" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
-              <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/merino-wool-socks" style="height:46px;v-text-anchor:middle;width:180px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;"><![endif]-->
-              <a href="https://merinotech.ca/collections/merino-wool-socks" style="background:#232323;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;line-height:46px;text-align:center;text-decoration:none;width:180px;">Shop socks</a>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td class="stack" width="50%" valign="top" style="padding:0 6px 10px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
+              <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/merino-wool-socks" style="height:46px;v-text-anchor:middle;width:255px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;"><![endif]-->
+              <a href="https://merinotech.ca/collections/merino-wool-socks" style="background:#232323;border-radius:4px;color:#FFFFFF;display:block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;line-height:46px;text-align:center;text-decoration:none;">Shop socks</a>
               <!--[if mso]></center></v:roundrect><![endif]-->
             </td></tr></table>
           </td>
-          <td class="stack" style="padding:0 6px 10px;" align="center">
-            <table role="presentation" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
-              <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/beanies" style="height:46px;v-text-anchor:middle;width:180px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;"><![endif]-->
-              <a href="https://merinotech.ca/collections/beanies" style="background:#232323;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;line-height:46px;text-align:center;text-decoration:none;width:180px;">Shop beanies</a>
+          <td class="stack" width="50%" valign="top" style="padding:0 6px 10px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
+              <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/beanies" style="height:46px;v-text-anchor:middle;width:255px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;"><![endif]-->
+              <a href="https://merinotech.ca/collections/beanies" style="background:#232323;border-radius:4px;color:#FFFFFF;display:block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;line-height:46px;text-align:center;text-decoration:none;">Shop beanies</a>
               <!--[if mso]></center></v:roundrect><![endif]-->
             </td></tr></table>
           </td>
@@ -201,7 +201,7 @@
         <p style="margin:0 0 22px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">[Placeholder] Your 20% is waiting. Use code <strong style="color:#1A1917;">{{ coupon_code|default:'WELCOME20' }}</strong> on your first order.</p>
         <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
           <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/all" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;"><![endif]-->
-          <a href="https://merinotech.ca/collections/all" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;width:240px;">Shop now &rarr;</a>
+          <a href="https://merinotech.ca/collections/all" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Shop now &rarr;</a>
           <!--[if mso]></center></v:roundrect><![endif]-->
         </td></tr></table>
       </td></tr>
