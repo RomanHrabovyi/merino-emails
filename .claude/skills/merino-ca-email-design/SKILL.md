@@ -92,13 +92,18 @@ description: Email design system для Merino.tech CA (merinotech.ca). Вико
 
 ### Типографіка (email-safe stack)
 ```
-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-H1 (hero):   28–32px / bold / line-height 1.2 / color #1A1917
-H2 (секція): 20–22px / bold / line-height 1.3 / color #1A1917
-Body:        16px / normal / line-height 1.6 / color #5C5C5C
-Small/cap:   13px / color #9A948A
-Контейнер:   600px, канва ззовні #EFEAE0
+Заголовки (H1/H2): SERIF — font-family: Georgia, 'Times New Roman', Times, serif;
+Решта (body, eyebrow, labels, кнопки, числа, ціни): SANS — 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+H1 (hero):   28–32px / bold / line-height 1.2 / color #1A1917 / SERIF
+H2 (секція): 20–22px / bold / line-height 1.3 / color #1A1917 / SERIF
+Body:        16px / normal / line-height 1.6 / color #5C5C5C / SANS
+Small/cap:   13px / color #9A948A / SANS
+Контейнер:   width:100%;max-width:600px (без зовнішньої канви — див. правила доставки)
 ```
+> **Serif лише для H1/H2** (елегантний editorial-контраст). Eyebrow-мітки (uppercase),
+> промо-числа (`20% OFF`), CTA, ціни, стат-плитки — лишаються **sans**. Georgia — email-safe,
+> рендериться скрізь, фолбек Times.
 
 ### Spacing
 ```
