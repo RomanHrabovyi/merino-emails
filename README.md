@@ -39,6 +39,9 @@ mobile-first, Klaviyo-теги на місці.
 | `welcome-01-intro.html` | Welcome flow #1 — вітання + промокод 20% |
 | `welcome-02-brand-story.html` | Welcome flow #2 — brand story / why merino |
 | `welcome-03-bestsellers.html` | Welcome flow #3 — social proof + bestsellers |
+| `welcome-04-build-your-set.html` | Welcome flow #4 — build your set |
+| `welcome-05-objections-faq.html` | Welcome flow #5 — objections / FAQ |
+| `welcome-06-last-chance.html` | Welcome flow #6 — last chance (код діє) |
 | `campaign-black-friday.html` | Кампанія — Black Friday 30% |
 
 ### `references/`
