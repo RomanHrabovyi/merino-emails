@@ -25,6 +25,7 @@ description: Email design system для Merino.tech CA (merinotech.ca). Вико
 - **Усі зображення мають бути клікабельними** — обгортай `<img>` у `<a href="...">` (не лише кнопки). Картинка веде на ту саму сторінку/колекцію, що й сусідня кнопка/блок.
 - **Лінки бери з Shopify (merinotech.ca)** через MCP (`search_collections` / `search_products`) — реальні handle колекцій/продуктів, щоб кожне зображення й кнопка вели на відповідну сторінку. Не вигадуй handle напам'ять. Evergreen-колекції: `all-men`, `all-women`, `men-merino-wool-base-layer-sets`, `men-bottoms`, `accessories`, `beanies`, `clearance`, `/collections/all`. Сезонні/промо-колекції для флоу не використовуй.
 - **Код знижки має бути робочим.** Якщо лист статичний і код жорстко вшитий — створити реальний код у Shopify (`create-discount`) або погодити з Roma. Для welcome/флоу зазвичай динамічний `{{ coupon_code|default:'...' }}` від Klaviyo — лишати як є (Klaviyo генерує робочий код), default — лише запасний.
+- **Знижка/оффер — завжди окремим блоком-акцентом, не рядком у тексті.** Якщо в листі є знижка чи промокод — виділяй її в самостійну секцію, що привертає увагу: темний фон (`#232323`), eyebrow (uppercase, `#E8965A`), велике число (`20% OFF`, ~34px, біле), а якщо є код — пунктирний чип (`border:2px dashed #E8965A`) з `{{ coupon_code|default:'...' }}`, і rust-CTA під ним. Не ховай оффер у звичайний абзац. (Приклад — компонент 9 нижче.)
 - Email-safe: табличний лейаут (`<table role="presentation">`), **інлайн-стилі**, mobile-first, рендер в Outlook/Gmail/Apple Mail. Не веб-дизайн-система, не flex/grid.
 - Klaviyo-теги лишати як є: `{{ first_name|default:'there' }}`, `{{ coupon_code|default:'...' }}`, `{% unsubscribe %}`, `{{ organization.name }}`, `{{ organization.full_address }}`.
 - Зображення — плейсхолдери з alt-текстом, чітко позначені `<!-- ЗАМІНИТИ: ... -->`. Roma вантажить реальні в Klaviyo.
@@ -212,6 +213,26 @@ CTA padding:     14px 32px
   <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#CFCFCF;">
     <a href="{% unsubscribe %}" style="color:#CFCFCF;text-decoration:underline;">Unsubscribe</a>
   </p>
+</td></tr>
+```
+
+### 9. Offer / discount — окремий блок-акцент (копіюй для будь-якої знижки/коду)
+```html
+<tr><td class="px py" style="padding:40px 24px;background:#232323;" align="center">
+  <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#E8965A;font-weight:700;">Your welcome gift</p>
+  <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:34px;line-height:1.1;color:#FFFFFF;font-weight:700;">20% OFF</p>
+  <p style="margin:0 0 18px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#CFCFCF;">your first order. Apply the code at checkout:</p>
+  <!-- CODE CHIP (прибрати, якщо знижка без коду / автоматична) -->
+  <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 22px;"><tr><td style="border:2px dashed #E8965A;border-radius:6px;padding:12px 28px;" align="center">
+    <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;letter-spacing:3px;color:#FFFFFF;font-weight:700;">{{ coupon_code|default:'WELCOME20' }}</span>
+  </td></tr></table>
+  <!-- CTA (rust, bulletproof — компонент 4) -->
+  <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+    <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ CTA_URL }}" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Shop now &rarr;</center><![endif]-->
+    <!--[if !mso]><!-- -->
+    <a href="{{ CTA_URL }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Shop now &rarr;</a>
+    <!--<![endif]-->
+  </td></tr></table>
 </td></tr>
 ```
 
