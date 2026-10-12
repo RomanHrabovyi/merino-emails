@@ -20,6 +20,11 @@ description: Email design system для Merino.tech CA (merinotech.ca). Вико
 
 ## Правила доставки (обовʼязково)
 - Віддавати **готовий HTML-файл у чаті**. Нічого не створювати в Klaviyo напряму — Roma сам вставляє код.
+- **Завжди давати лінк на скачування коду** (прикріплений файл у відповіді) — щоразу, не лише за запитом.
+- **Темплейт листа завжди пушити в git** (гілка задачі, у `templates/`) — коміт + push, і давати лінк на файл у репозиторії.
+- **Усі зображення мають бути клікабельними** — обгортай `<img>` у `<a href="...">` (не лише кнопки). Картинка веде на ту саму сторінку/колекцію, що й сусідня кнопка/блок.
+- **Лінки бери з Shopify (merinotech.ca)** через MCP (`search_collections` / `search_products`) — реальні handle колекцій/продуктів, щоб кожне зображення й кнопка вели на відповідну сторінку. Не вигадуй handle напам'ять. Evergreen-колекції: `all-men`, `all-women`, `men-merino-wool-base-layer-sets`, `men-bottoms`, `accessories`, `beanies`, `clearance`, `/collections/all`. Сезонні/промо-колекції для флоу не використовуй.
+- **Код знижки має бути робочим.** Якщо лист статичний і код жорстко вшитий — створити реальний код у Shopify (`create-discount`) або погодити з Roma. Для welcome/флоу зазвичай динамічний `{{ coupon_code|default:'...' }}` від Klaviyo — лишати як є (Klaviyo генерує робочий код), default — лише запасний.
 - Email-safe: табличний лейаут (`<table role="presentation">`), **інлайн-стилі**, mobile-first, рендер в Outlook/Gmail/Apple Mail. Не веб-дизайн-система, не flex/grid.
 - Klaviyo-теги лишати як є: `{{ first_name|default:'there' }}`, `{{ coupon_code|default:'...' }}`, `{% unsubscribe %}`, `{{ organization.name }}`, `{{ organization.full_address }}`.
 - Зображення — плейсхолдери з alt-текстом, чітко позначені `<!-- ЗАМІНИТИ: ... -->`. Roma вантажить реальні в Klaviyo.
