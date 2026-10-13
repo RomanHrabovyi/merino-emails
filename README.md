@@ -38,6 +38,7 @@ mobile-first, Klaviyo-теги на місці.
 |---|---|
 | `welcome-01-intro.html` | Welcome flow #1 — вітання + промокод 20% |
 | `welcome-02-brand-story.html` | Welcome flow #2 — brand story / why merino |
+| `welcome-02-shop-by-weight.html` | Welcome flow #2 (alt) — explore by weight / GSM |
 | `welcome-03-bestsellers.html` | Welcome flow #3 — social proof + bestsellers |
 | `welcome-04-build-your-set.html` | Welcome flow #4 — build your set |
 | `welcome-05-objections-faq.html` | Welcome flow #5 — objections / FAQ |
