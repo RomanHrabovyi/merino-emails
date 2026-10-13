@@ -42,6 +42,8 @@ mobile-first, Klaviyo-теги на місці.
 | `welcome-04-build-your-set.html` | Welcome flow #4 — build your set |
 | `welcome-05-objections-faq.html` | Welcome flow #5 — objections / FAQ |
 | `welcome-06-last-chance.html` | Welcome flow #6 — last chance (код діє) |
+| `returning-01-welcome-back.html` | Returning-customer flow #1 — welcome back + rewards |
+| `returning-02-next-layer.html` | Returning-customer flow #2 — your next layer |
 | `campaign-black-friday.html` | Кампанія — Black Friday 30% |
 
 ### `references/`

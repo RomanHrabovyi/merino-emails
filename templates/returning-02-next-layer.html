@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<title>{{ organization.name }}</title>
+<!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
+<!-- NOTE: Klaviyo HTML blocks strip <head>/<style>. This email is built to render correctly on INLINE styles alone; the media query below is a progressive enhancement only. -->
+<!--
+  ============================================================
+  FLOW: Welcome — PATH #1 RETURNING CUSTOMER (1+ prior order)
+  EMAIL 2 · Day 2 (sends after Wait 2 days, after Email 1
+  "Welcome back + Rewards").
+  GOAL: bring them back to shop their NEXT merino layer
+  (assortment / bestsellers, both women's & men's), with a
+  soft reminder that their loyalty points are waiting as the
+  motive. One primary CTA. Framework: BAB.
+  NOTE: no welcome coupon here (returning customer). The
+  incentive is accrued LOYALTY POINTS, redeemed at checkout
+  via the rewards program — so storefront links are PLAIN,
+  with NO /discount/ coupon wrapper.
+  ============================================================
+-->
+<style>
+  @media only screen and (max-width:600px){
+    .container{width:100%!important}
+    .px{padding-left:20px!important;padding-right:20px!important}
+    .py{padding-top:24px!important;padding-bottom:24px!important}
+    .stack{display:block!important;width:100%!important;padding-left:0!important;padding-right:0!important}
+    .h1{font-size:26px!important}
+  }
+  a{color:#C16452;text-decoration:underline}
+</style>
+</head>
+<body style="margin:0;padding:0;background:#FFFFFF;">
+<!-- PREHEADER (complements subject — does not repeat it) -->
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Base layers, hoodies, socks, beanies &mdash; pick your next favourite and put your rewards to work.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFFFFF;">
+  <tr><td align="center" style="padding:0;">
+    <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#FFFFFF;">
+
+      <!-- ============ HERO — YOUR NEXT LAYER (message + CTA, no scroll) ============ -->
+      <tr><td class="px py" style="padding:40px 24px;background:#F4F1EA;" align="center">
+        <!-- ЗАМІНИТИ / replace in Klaviyo: hero image — a merino layer being added to an outfit (552px wide) -->
+        <a href="https://merinotech.ca/collections/all" style="text-decoration:none;"><img src="https://placehold.co/552x360/EFEAE0/9A948A?text=YOUR+NEXT+MERINO+LAYER" width="552" alt="Your next merino layer from Merino.tech" style="display:block;width:100%;max-width:552px;border:0;border-radius:8px;margin-bottom:24px;"></a>
+        <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#BF570A;font-weight:700;">Welcome back</p>
+        <h1 class="h1" style="text-align:center;margin:0 0 12px;font-family:Georgia,'Times New Roman',Times,serif;font-size:30px;line-height:1.2;color:#1A1917;font-weight:700;">Ready for your next layer?</h1>
+        <p style="margin:0 0 24px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Good to have you back, {{ first_name|default:'there' }}. You already know how one merino piece feels &mdash; soft, warm, odour-free day after day. Imagine your whole rotation that way. Here&rsquo;s where to start.</p>
+        <!-- PRIMARY CTA (rust) — above the fold -->
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/all" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Shop your next layer &rarr;</center><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="https://merinotech.ca/collections/all" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Shop your next layer &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+      <!-- ============ BODY — ONE IDEA: merino is a rotation, not a single piece ============ -->
+      <tr><td class="px py" style="padding:36px 24px 8px;background:#FFFFFF;" align="center">
+        <h2 style="text-align:center;margin:0 0 10px;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">One layer is just the beginning</h2>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">The people who love merino rarely stop at one. A base layer for the trail, a hoodie for the everyday, socks and a beanie for the cold snaps &mdash; built to layer together, for her and for him.</p>
+      </td></tr>
+
+      <!-- ============ PRODUCT SHOWCASE — FOR HER / FOR HIM ============ -->
+      <!--
+        KLAVIYO DYNAMIC CATALOG — the 4 static cards below are placeholders
+        linking to the women's / men's collections. Swap per-product image,
+        title, price and link in Klaviyo (e.g. a product-feed / catalog block)
+        if you want live recommendations.
+      -->
+
+      <!-- ROW 1 — FOR HER (2 products) -->
+      <tr><td class="px" style="padding:20px 24px 0;background:#FFFFFF;">
+        <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#BF570A;font-weight:700;text-align:center;">For her</p>
+      </td></tr>
+      <tr><td class="px" style="padding:0 24px 8px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td class="stack" width="50%" valign="top" style="padding:6px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E3DED4;border-radius:8px;"><tr><td style="padding:14px;" align="center">
+              <!-- ЗАМІНИТИ / replace in Klaviyo: women's product photo + data -->
+              <a href="https://merinotech.ca/collections/women-sets" style="text-decoration:none;"><img src="https://placehold.co/240x240/F7F7F8/9A948A?text=HER+BASE+LAYER+SET" width="240" alt="Women&rsquo;s merino base layer set" style="display:block;width:100%;max-width:240px;border:0;border-radius:6px;margin-bottom:12px;"></a>
+              <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1;letter-spacing:1px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Women&rsquo;s Base Layer Set</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;color:#5C5C5C;">$149.00</p>
+            </td></tr></table>
+          </td>
+          <td class="stack" width="50%" valign="top" style="padding:6px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E3DED4;border-radius:8px;"><tr><td style="padding:14px;" align="center">
+              <!-- ЗАМІНИТИ / replace in Klaviyo: women's product photo + data -->
+              <a href="https://merinotech.ca/collections/all-women" style="text-decoration:none;"><img src="https://placehold.co/240x240/F7F7F8/9A948A?text=HER+LONG+SLEEVE" width="240" alt="Women&rsquo;s merino long sleeve top" style="display:block;width:100%;max-width:240px;border:0;border-radius:6px;margin-bottom:12px;"></a>
+              <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1;letter-spacing:1px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Women&rsquo;s Merino Long Sleeve</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;color:#5C5C5C;">$75.00</p>
+            </td></tr></table>
+          </td>
+        </tr></table>
+      </td></tr>
+      <!-- CTA — shop women's (dark, fluid) -->
+      <tr><td class="px" style="padding:4px 24px 24px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/all-women" style="height:46px;v-text-anchor:middle;width:552px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;">Shop women&rsquo;s &rarr;</center><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="https://merinotech.ca/collections/all-women" style="background:#232323;border-radius:4px;color:#FFFFFF;display:block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;line-height:46px;text-align:center;text-decoration:none;">Shop women&rsquo;s &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+      <!-- divider -->
+      <tr><td style="padding:0 24px;background:#FFFFFF;"><div style="border-top:1px solid #E3DED4;height:1px;line-height:1px;font-size:1px;">&nbsp;</div></td></tr>
+
+      <!-- ROW 2 — FOR HIM (2 products) -->
+      <tr><td class="px" style="padding:24px 24px 0;background:#FFFFFF;">
+        <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#BF570A;font-weight:700;text-align:center;">For him</p>
+      </td></tr>
+      <tr><td class="px" style="padding:0 24px 8px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td class="stack" width="50%" valign="top" style="padding:6px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E3DED4;border-radius:8px;"><tr><td style="padding:14px;" align="center">
+              <!-- ЗАМІНИТИ / replace in Klaviyo: men's product photo + data -->
+              <a href="https://merinotech.ca/collections/men-merino-wool-base-layer-sets" style="text-decoration:none;"><img src="https://placehold.co/240x240/F7F7F8/9A948A?text=HIM+BASE+LAYER+SET" width="240" alt="Men&rsquo;s merino base layer set" style="display:block;width:100%;max-width:240px;border:0;border-radius:6px;margin-bottom:12px;"></a>
+              <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1;letter-spacing:1px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Men&rsquo;s Base Layer Set</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;color:#5C5C5C;">$149.00</p>
+            </td></tr></table>
+          </td>
+          <td class="stack" width="50%" valign="top" style="padding:6px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E3DED4;border-radius:8px;"><tr><td style="padding:14px;" align="center">
+              <!-- ЗАМІНИТИ / replace in Klaviyo: men's product photo + data -->
+              <a href="https://merinotech.ca/collections/all-men" style="text-decoration:none;"><img src="https://placehold.co/240x240/F7F7F8/9A948A?text=HIM+HOODIE" width="240" alt="Men&rsquo;s merino hoodie" style="display:block;width:100%;max-width:240px;border:0;border-radius:6px;margin-bottom:12px;"></a>
+              <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1;letter-spacing:1px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Men&rsquo;s Merino Hoodie</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;color:#5C5C5C;">$129.00</p>
+            </td></tr></table>
+          </td>
+        </tr></table>
+      </td></tr>
+      <!-- CTA — shop men's (dark, fluid) -->
+      <tr><td class="px" style="padding:4px 24px 28px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/all-men" style="height:46px;v-text-anchor:middle;width:552px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;">Shop men&rsquo;s &rarr;</center><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="https://merinotech.ca/collections/all-men" style="background:#232323;border-radius:4px;color:#FFFFFF;display:block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;line-height:46px;text-align:center;text-decoration:none;">Shop men&rsquo;s &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+      <!-- ============ UNISEX — COMPLETE THE LAYER (socks + beanies) ============ -->
+      <tr><td class="px" style="padding:24px 24px 0;background:#F4F1EA;" align="center">
+        <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#BF570A;font-weight:700;">Complete the layer</p>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;color:#5C5C5C;">Unisex merino socks &amp; beanies &mdash; the easy add-ons for every winter.</p>
+      </td></tr>
+      <tr><td class="px" style="padding:12px 24px 4px;background:#F4F1EA;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td class="stack" width="50%" valign="top" style="padding:6px;">
+            <!-- ЗАМІНИТИ / replace in Klaviyo: merino socks photo -->
+            <a href="https://merinotech.ca/collections/merino-wool-socks" style="text-decoration:none;"><img src="https://placehold.co/270x180/FFFFFF/9A948A?text=MERINO+SOCKS" width="270" alt="Merino wool socks" style="display:block;width:100%;max-width:270px;border:0;border-radius:8px;"></a>
+          </td>
+          <td class="stack" width="50%" valign="top" style="padding:6px;">
+            <!-- ЗАМІНИТИ / replace in Klaviyo: merino beanie photo -->
+            <a href="https://merinotech.ca/collections/beanies" style="text-decoration:none;"><img src="https://placehold.co/270x180/FFFFFF/9A948A?text=MERINO+BEANIES" width="270" alt="Merino wool beanies" style="display:block;width:100%;max-width:270px;border:0;border-radius:8px;"></a>
+          </td>
+        </tr></table>
+      </td></tr>
+      <tr><td class="px" style="padding:10px 24px 32px;background:#F4F1EA;" align="center">
+        <a href="https://merinotech.ca/collections/accessories" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#C16452;font-weight:700;text-decoration:underline;">Browse all accessories &rarr;</a>
+      </td></tr>
+
+      <!-- ============ SOCIAL PROOF — right at the point of doubt ============ -->
+      <tr><td class="px py" style="padding:36px 24px 16px;background:#232323;" align="center">
+        <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#E8965A;font-weight:700;">Why they come back</p>
+        <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;line-height:1;letter-spacing:3px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <!-- Rating line (sample figures — replace with live Judge.me numbers) -->
+        <!-- replace in Klaviyo: confirm live aggregate rating / review count from Judge.me -->
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;color:#CFCFCF;">Rated <strong style="color:#FFFFFF;">4.8/5</strong> across thousands of verified reviews</p>
+      </td></tr>
+      <tr><td class="px" style="padding:0 24px 8px;background:#232323;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td class="stack" width="50%" valign="top" style="padding:10px 6px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#2D2D2D;border-radius:8px;"><tr><td style="padding:18px;">
+              <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1;letter-spacing:1px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;color:#FFFFFF;font-style:italic;">&ldquo;Bought the base layer last winter, came back for the hoodie and socks. Everything just works together.&rdquo;</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;color:#9A948A;">&mdash; Melissa T., verified buyer</p>
+            </td></tr></table>
+          </td>
+          <td class="stack" width="50%" valign="top" style="padding:10px 6px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#2D2D2D;border-radius:8px;"><tr><td style="padding:18px;">
+              <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1;letter-spacing:1px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;color:#FFFFFF;font-style:italic;">&ldquo;My third Merino.tech order. True to size every time, and the odour-free claim is real on long trips.&rdquo;</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;color:#9A948A;">&mdash; Jon P., verified buyer</p>
+            </td></tr></table>
+          </td>
+        </tr></table>
+      </td></tr>
+      <tr><td style="padding:0 24px 32px;background:#232323;">&nbsp;</td></tr>
+
+      <!-- ============ CLOSING — remove the last objection ============ -->
+      <tr><td class="px py" style="padding:36px 24px 10px;background:#FFFFFF;" align="center">
+        <h2 style="text-align:center;margin:0 0 8px;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">Easy to add to your rotation</h2>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">You already know the fit. Reordering is the easy part.</p>
+      </td></tr>
+      <tr><td class="px" style="padding:12px 24px 28px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td class="stack" width="33.33%" valign="top" style="padding:10px 8px;" align="center">
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Canada-wide shipping</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">Fast, tracked delivery to your door.</p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:10px 8px;" align="center">
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">30-day returns</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">Changed your mind? Send it back, easy.</p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:10px 8px;" align="center">
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">True-to-size fit</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">Your usual size fits &mdash; size guide on every page.</p>
+          </td>
+        </tr></table>
+      </td></tr>
+
+      <!-- ============ REWARDS REMINDER — standout accent + final CTA ============ -->
+      <!--
+        LOYALTY POINTS as the motive (soft reminder — Email 1 introduced the
+        rewards). This is NOT a coupon code; points redeem at checkout via the
+        rewards program, so the CTA link stays PLAIN (no /discount/ wrapper).
+        replace in Klaviyo: map {{ loyalty_points }} to the customer's live
+        rewards balance property. The default keeps the copy clean when the
+        property is empty ("Your points are waiting").
+      -->
+      <tr><td class="px py" style="padding:40px 24px;background:#232323;" align="center">
+        <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#E8965A;font-weight:700;">Your rewards</p>
+        <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:30px;line-height:1.15;color:#FFFFFF;font-weight:700;">{{ loyalty_points|default:'Your points' }} are waiting</p>
+        <p style="margin:0 0 22px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#CFCFCF;">Put the points you&rsquo;ve earned toward your next merino layer &mdash; they&rsquo;re applied right at checkout.</p>
+        <!-- FINAL CTA (rust) — repeats the one primary action -->
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/all" style="height:48px;v-text-anchor:middle;width:260px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Redeem on your next layer &rarr;</center><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="https://merinotech.ca/collections/all" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 28px;">Redeem on your next layer &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+</body></html>
