@@ -31,6 +31,7 @@ mobile-first, Klaviyo-теги на місці.
   `welcome-01-intro.html`, `welcome-02-brand-story.html`, `welcome-03-bestsellers.html`.
 - **Кампанії** (разові, поза флоу): `campaign-<назва>.html`, напр. `campaign-black-friday.html`.
 - **Транзакційні**: `transactional-<назва>.html`.
+- **Великий флоу можна винести в підтеку** `templates/<flow>/`, напр. `templates/post-purchase/`.
 
 Поточні шаблони:
 
@@ -46,6 +47,7 @@ mobile-first, Klaviyo-теги на місці.
 | `returning-01-welcome-back.html` | Returning-customer flow #1 — welcome back + rewards |
 | `returning-02-next-layer.html` | Returning-customer flow #2 — your next layer |
 | `returning-03-community-accessories.html` | Returning-customer flow #3 — community + accessories |
+| `post-purchase/post-purchase-01-welcome-back.html` | Post-purchase flow #1 — welcome back (Day 0) |
 | `campaign-black-friday.html` | Кампанія — Black Friday 30% |
 
 ### `references/`
