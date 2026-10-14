@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<title>{{ organization.name }}</title>
+<!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
+<!-- NOTE: Klaviyo HTML blocks strip <head>/<style>. This email is built to render correctly on INLINE styles alone; the media query below is a progressive enhancement only. -->
+<!--
+  ============================================================
+  FLOW: Post Purchase (new) — PATH 1 First-Time Buyer
+  EMAIL 6 "Referral / Second Order" · Day 30 (14 days after
+  Email #5). FINAL email of the series.
+  SEGMENT: first-time buyer, warmed through #1 (thank-you),
+  #2 (care guide), #3 (material story), #4 (sizing & fit),
+  #5 (cross-sell / build your set). 30 days in they've worn the
+  piece and formed an opinion — the ideal moment to ask for a
+  referral. Shows both women's and men's where products appear.
+  GOAL (one): turn a happy buyer into an advocate via a give-get
+  referral ("love it? share it — you both save").
+  SECONDARY (soft, must NOT compete with the referral CTA):
+  nudge a 2nd purchase for anyone who hasn't ordered again.
+  ONE primary CTA: "Share & save" (repeated hero + offer + final).
+  SERIES LOGIC: does NOT re-tell care / material / sizing / the
+  weights system — this email is purely love-it-share-it + give-get.
+  ============================================================
+  REFERRAL PLATFORM (Roma connects his own — e.g. Referral Candy /
+  Yotpo / Smile). Replace these placeholders at integration:
+    - {{ referral_link }}  -> each customer's unique share link.
+      Left as {{ referral_link|default:'https://merinotech.ca' }}
+      so it renders if the tag is empty. Wrapped on every CTA + image.
+    - {{ referral_offer }} -> the give-get reward string, e.g.
+      "Give $20, get $20". Shown as the big offer line with a
+      sample default — DO swap for the real offer from the platform.
+  LINKS: referral CTAs -> {{ referral_link }}. The soft secondary
+  shop link uses the evergreen /collections/all (plain, no discount
+  wrapper — the referral reward is not a storefront coupon code).
+  COPY: Canadian English (fibre, colour, favourite, neighbour).
+  Subject + preheader kept verbatim per brief.
+  replace in Klaviyo:
+    - hero / step images -> real lifestyle + share imagery
+    - review + aggregate rating/count -> live Judge.me data
+    - customer-count line -> real referral/customer number
+  ============================================================
+-->
+<style>
+  @media only screen and (max-width:600px){
+    .container{width:100%!important}
+    .px{padding-left:20px!important;padding-right:20px!important}
+    .py{padding-top:24px!important;padding-bottom:24px!important}
+    .stack{display:block!important;width:100%!important;padding-left:0!important;padding-right:0!important}
+    .h1{font-size:26px!important}
+  }
+  a{color:#C16452;text-decoration:underline}
+</style>
+</head>
+<body style="margin:0;padding:0;background:#FFFFFF;">
+<!-- PREHEADER (kept verbatim per brief — complements subject) -->
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Share Merino with a friend &mdash; you both save.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFFFFF;">
+  <tr><td align="center" style="padding:0;">
+    <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#FFFFFF;">
+
+      <!-- ============ HERO — love it? share it. give-get in focus, CTA above the fold ============ -->
+      <tr><td class="px py" style="padding:40px 24px;background:#F4F1EA;" align="center">
+        <!-- ЗАМІНИТИ / replace in Klaviyo: hero — two people in Merino sharing a moment (handing over / side by side), warm lifestyle, 552px wide -->
+        <a href="{{ referral_link|default:'https://merinotech.ca' }}" style="text-decoration:none;"><img src="https://placehold.co/552x320/EFEAE0/9A948A?text=LOVE+IT%3F+SHARE+IT" width="552" alt="Two friends wearing Merino, sharing a layer they love" style="display:block;width:100%;max-width:552px;border:0;border-radius:8px;margin-bottom:24px;"></a>
+        <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#BF570A;font-weight:700;">Share the warmth</p>
+        <h1 class="h1" style="text-align:center;margin:0 0 12px;font-family:Georgia,'Times New Roman',Times,serif;font-size:30px;line-height:1.2;color:#1A1917;font-weight:700;">Love your Merino, {{ first_name|default:'there' }}? Pass it on</h1>
+        <p style="margin:0 0 22px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">A month in, you know how it feels &mdash; so share it with someone who&rsquo;d love it too. They save on their first order, and you earn a reward when they do. Everybody wins.</p>
+        <!-- PRIMARY CTA (rust) — above the fold. Points to the referral platform link. -->
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ referral_link|default:'https://merinotech.ca' }}" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Share &amp; save &rarr;</center><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="{{ referral_link|default:'https://merinotech.ca' }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Share &amp; save &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+      <!-- ============ BODY 1 — HOW IT WORKS in 3 steps (share link -> friend buys -> you both get a reward) ============ -->
+      <tr><td class="px py" style="padding:36px 24px 10px;background:#FFFFFF;" align="center">
+        <h2 style="text-align:center;margin:0 0 8px;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">How it works</h2>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Three steps, about a minute &mdash; and you both come out ahead.</p>
+      </td></tr>
+      <tr><td class="px" style="padding:16px 24px 10px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <!-- step 1 -->
+          <td class="stack" width="33.33%" valign="top" style="padding:8px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E3DED4;border-radius:8px;height:100%;"><tr><td style="padding:20px 16px;" align="center">
+              <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 12px;"><tr><td width="36" height="36" align="center" valign="middle" bgcolor="#BF570A" style="width:36px;height:36px;border-radius:18px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;color:#FFFFFF;">1</td></tr></table>
+              <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Share your link</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#5C5C5C;">Send your personal link to a friend, a family member or a neighbour who&rsquo;d love Merino.</p>
+            </td></tr></table>
+          </td>
+          <!-- step 2 -->
+          <td class="stack" width="33.33%" valign="top" style="padding:8px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E3DED4;border-radius:8px;height:100%;"><tr><td style="padding:20px 16px;" align="center">
+              <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 12px;"><tr><td width="36" height="36" align="center" valign="middle" bgcolor="#BF570A" style="width:36px;height:36px;border-radius:18px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;color:#FFFFFF;">2</td></tr></table>
+              <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">They shop &amp; save</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#5C5C5C;">Your friend gets a discount on their first order &mdash; a warm welcome to their first layer.</p>
+            </td></tr></table>
+          </td>
+          <!-- step 3 -->
+          <td class="stack" width="33.33%" valign="top" style="padding:8px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E3DED4;border-radius:8px;height:100%;"><tr><td style="padding:20px 16px;" align="center">
+              <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 12px;"><tr><td width="36" height="36" align="center" valign="middle" bgcolor="#BF570A" style="width:36px;height:36px;border-radius:18px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;color:#FFFFFF;">3</td></tr></table>
+              <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">You both get rewarded</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#5C5C5C;">Once their order lands, your reward is yours &mdash; to put toward your next layer.</p>
+            </td></tr></table>
+          </td>
+        </tr></table>
+      </td></tr>
+
+      <!-- ============ GIVE-GET OFFER — standalone dark accent block (the reward, front and centre) ============ -->
+      <!--
+        replace in Klaviyo: {{ referral_offer }} = the real give-get string
+        from the referral platform (e.g. "Give $20, get $20"). The default
+        below is a SAMPLE only — do not ship it without confirming the live
+        offer. {{ referral_link }} = each customer's unique share link.
+      -->
+      <tr><td class="px py" style="padding:40px 24px;background:#232323;" align="center">
+        <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#E8965A;font-weight:700;">The give-get</p>
+        <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:34px;line-height:1.1;color:#FFFFFF;font-weight:700;">{{ referral_offer|default:'Give $20, get $20' }}</p>
+        <p style="margin:0 0 22px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#CFCFCF;">Your friend saves on their first order. You earn your reward the moment they check out. Share as many times as you like.</p>
+        <!-- CTA (rust, bulletproof) — to the referral platform link -->
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 14px;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ referral_link|default:'https://merinotech.ca' }}" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Share &amp; save &rarr;</center><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="{{ referral_link|default:'https://merinotech.ca' }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Share &amp; save &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#9A948A;">No code to remember &mdash; your link does the work.</p>
+      </td></tr>
+
+      <!-- ============ SOCIAL PROOF — trust line beside the ask (stars + join the community) ============ -->
+      <tr><td class="px py" style="padding:30px 24px 14px;background:#F4F1EA;" align="center">
+        <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;line-height:1;letter-spacing:3px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <!-- replace in Klaviyo: confirm live aggregate rating / review count from Judge.me, and the real customer/referral count -->
+        <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;color:#1A1917;font-weight:700;">Rated 4.8/5 across thousands of verified reviews</p>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5;color:#6B675F;">Join thousands of Canadians already sharing Merino with the people they know.</p>
+      </td></tr>
+      <tr><td class="px" style="padding:4px 24px 32px;background:#F4F1EA;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFFFFF;border:1px solid #E3DED4;border-radius:8px;"><tr><td style="padding:20px;" align="center">
+          <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1;letter-spacing:1px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <!-- replace in Klaviyo: swap for a live Judge.me review about recommending / gifting Merino -->
+          <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55;color:#1A1917;font-style:italic;">&ldquo;I&rsquo;ve talked half my hiking group into these. Sent my link, they saved on their first order, and I&rsquo;ve basically kitted out my next set for free.&rdquo;</p>
+          <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#9A948A;">&mdash; Melissa T., verified buyer</p>
+        </td></tr></table>
+      </td></tr>
+
+      <!-- ============ SECONDARY (SOFT) — for anyone who hasn't reordered: come back for the next layer. Muted, must NOT out-shout the referral CTA (text link only, no button). ============ -->
+      <tr><td class="px py" style="padding:30px 24px;background:#F7F7F8;" align="center">
+        <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#9A948A;font-weight:700;">Or treat yourself</p>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#6B675F;">Not ready to share yet? Come back for your next layer &mdash; <a href="https://merinotech.ca/collections/all" style="color:#C16452;text-decoration:underline;">browse the collection</a> (<a href="https://merinotech.ca/collections/all-women" style="color:#C16452;text-decoration:underline;">women&rsquo;s</a> &middot; <a href="https://merinotech.ca/collections/all-men" style="color:#C16452;text-decoration:underline;">men&rsquo;s</a>).</p>
+      </td></tr>
+
+      <!-- ============ CLOSING — remove the last friction (sharing is free & easy; the friend wins too) ============ -->
+      <tr><td class="px py" style="padding:36px 24px 8px;background:#FFFFFF;" align="center">
+        <h2 style="text-align:center;margin:0 0 8px;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">Nothing to lose by sharing</h2>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">It&rsquo;s free, it takes seconds, and your friend gets a real welcome.</p>
+      </td></tr>
+      <tr><td class="px" style="padding:12px 24px 28px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td class="stack" width="33.33%" valign="top" style="padding:10px 8px;" align="center">
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Free to share</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">No cost, no catch &mdash; just your link and the people you&rsquo;d tell anyway.</p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:10px 8px;" align="center">
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Done in seconds</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">One tap to send by text, email or social &mdash; no code to copy.</p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:10px 8px;" align="center">
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Your friend wins too</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">They save on their first order &mdash; you&rsquo;re doing them a favour.</p>
+          </td>
+        </tr></table>
+      </td></tr>
+
+      <!-- ============ FINAL CTA — one action, repeated (bone = final block) ============ -->
+      <tr><td class="px py" style="padding:36px 24px 14px;background:#F4F1EA;" align="center">
+        <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#BF570A;font-weight:700;">Love it? Pass it on</p>
+        <h2 style="text-align:center;margin:0 0 10px;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">Share Merino, you both save</h2>
+        <p style="margin:0 0 22px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Send your link to someone who&rsquo;d love their first layer as much as you love yours.</p>
+      </td></tr>
+      <tr><td class="px" style="padding:4px 24px 40px;background:#F4F1EA;" align="center">
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ referral_link|default:'https://merinotech.ca' }}" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Share &amp; save &rarr;</center><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="{{ referral_link|default:'https://merinotech.ca' }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Share &amp; save &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+</body></html>
