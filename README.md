@@ -53,7 +53,8 @@ mobile-first, Klaviyo-теги на місці.
 | `welcome-flow/returning-01-welcome-back.html` | Returning #1 — welcome back + rewards |
 | `welcome-flow/returning-02-next-layer.html` | Returning #2 — your next layer |
 | `welcome-flow/returning-03-community-accessories.html` | Returning #3 — community + accessories |
-| `post-purchase/post-purchase-01-welcome-back.html` | Post-purchase #1 — welcome back (Day 0) |
+| `post-purchase/post-purchase-01-thank-you-what-happens-next.html` | Post-purchase #1 (first-time buyer) — thank you / what happens next (Day 0) |
+| `post-purchase/post-purchase-01-welcome-back.html` | Post-purchase #1 (returning buyer) — welcome back (Day 0) |
 | `campaigns/campaign-black-friday.html` | Кампанія — Black Friday 30% |
 
 ### `references/`
