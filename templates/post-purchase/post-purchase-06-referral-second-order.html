@@ -26,16 +26,23 @@
   weights system — this email is purely love-it-share-it + give-get.
   ============================================================
   REFERRAL PLATFORM (Roma connects his own — e.g. Referral Candy /
-  Yotpo / Smile). Replace these placeholders at integration:
-    - {{ referral_link }}  -> each customer's unique share link.
-      Left as {{ referral_link|default:'https://merinotech.ca' }}
-      so it renders if the tag is empty. Wrapped on every CTA + image.
-    - {{ referral_offer }} -> the give-get reward string, e.g.
-      "Give $20, get $20". Shown as the big offer line with a
-      sample default — DO swap for the real offer from the platform.
-  LINKS: referral CTAs -> {{ referral_link }}. The soft secondary
-  shop link uses the evergreen /collections/all (plain, no discount
-  wrapper — the referral reward is not a storefront coupon code).
+  Yotpo / Smile). At integration, replace these:
+    - SHARE LINK: every "Share & save" CTA + the hero image currently
+      point to the plain, working URL https://merinotech.ca so the
+      buttons work in any preview right now. SWAP that href for each
+      customer's unique share link from the referral platform (its
+      merge tag, e.g. {{ referral_link }}). There are 7 hrefs:
+      hero image, hero button, offer-block button, final button
+      (each button is a VML <a> pair for Outlook). Find/replace
+      https://merinotech.ca -> the platform tag.
+    - OFFER: {{ referral_offer }} is the give-get reward string, e.g.
+      "Give $20, get $20". Shown as the big offer line with a sample
+      default — swap for the real offer from the platform. (This is a
+      TEXT merge tag; it only renders inside Klaviyo, not in a raw
+      browser preview — expected.)
+  LINKS: the soft secondary shop link uses the evergreen
+  /collections/all (plain, no discount wrapper — the referral reward
+  is not a storefront coupon code).
   COPY: Canadian English (fibre, colour, favourite, neighbour).
   Subject + preheader kept verbatim per brief.
   replace in Klaviyo:
@@ -65,15 +72,15 @@
       <!-- ============ HERO — love it? share it. give-get in focus, CTA above the fold ============ -->
       <tr><td class="px py" style="padding:40px 24px;background:#F4F1EA;" align="center">
         <!-- ЗАМІНИТИ / replace in Klaviyo: hero — two people in Merino sharing a moment (handing over / side by side), warm lifestyle, 552px wide -->
-        <a href="{{ referral_link|default:'https://merinotech.ca' }}" style="text-decoration:none;"><img src="https://placehold.co/552x320/EFEAE0/9A948A?text=LOVE+IT%3F+SHARE+IT" width="552" alt="Two friends wearing Merino, sharing a layer they love" style="display:block;width:100%;max-width:552px;border:0;border-radius:8px;margin-bottom:24px;"></a>
+        <a href="https://merinotech.ca" style="text-decoration:none;"><img src="https://placehold.co/552x320/EFEAE0/9A948A?text=LOVE+IT%3F+SHARE+IT" width="552" alt="Two friends wearing Merino, sharing a layer they love" style="display:block;width:100%;max-width:552px;border:0;border-radius:8px;margin-bottom:24px;"></a>
         <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#BF570A;font-weight:700;">Share the warmth</p>
         <h1 class="h1" style="text-align:center;margin:0 0 12px;font-family:Georgia,'Times New Roman',Times,serif;font-size:30px;line-height:1.2;color:#1A1917;font-weight:700;">Love your Merino, {{ first_name|default:'there' }}? Pass it on</h1>
         <p style="margin:0 0 22px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">A month in, you know how it feels &mdash; so share it with someone who&rsquo;d love it too. They save on their first order, and you earn a reward when they do. Everybody wins.</p>
         <!-- PRIMARY CTA (rust) — above the fold. Points to the referral platform link. -->
         <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
-          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ referral_link|default:'https://merinotech.ca' }}" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Share &amp; save &rarr;</center><![endif]-->
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Share &amp; save &rarr;</center><![endif]-->
           <!--[if !mso]><!-- -->
-          <a href="{{ referral_link|default:'https://merinotech.ca' }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Share &amp; save &rarr;</a>
+          <a href="https://merinotech.ca" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Share &amp; save &rarr;</a>
           <!--<![endif]-->
         </td></tr></table>
       </td></tr>
@@ -125,9 +132,9 @@
         <p style="margin:0 0 22px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#CFCFCF;">Your friend saves on their first order. You earn your reward the moment they check out. Share as many times as you like.</p>
         <!-- CTA (rust, bulletproof) — to the referral platform link -->
         <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 14px;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
-          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ referral_link|default:'https://merinotech.ca' }}" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Share &amp; save &rarr;</center><![endif]-->
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Share &amp; save &rarr;</center><![endif]-->
           <!--[if !mso]><!-- -->
-          <a href="{{ referral_link|default:'https://merinotech.ca' }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Share &amp; save &rarr;</a>
+          <a href="https://merinotech.ca" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Share &amp; save &rarr;</a>
           <!--<![endif]-->
         </td></tr></table>
         <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#9A948A;">No code to remember &mdash; your link does the work.</p>
@@ -185,9 +192,9 @@
       </td></tr>
       <tr><td class="px" style="padding:4px 24px 40px;background:#F4F1EA;" align="center">
         <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
-          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ referral_link|default:'https://merinotech.ca' }}" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Share &amp; save &rarr;</center><![endif]-->
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Share &amp; save &rarr;</center><![endif]-->
           <!--[if !mso]><!-- -->
-          <a href="{{ referral_link|default:'https://merinotech.ca' }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Share &amp; save &rarr;</a>
+          <a href="https://merinotech.ca" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Share &amp; save &rarr;</a>
           <!--<![endif]-->
         </td></tr></table>
       </td></tr>
