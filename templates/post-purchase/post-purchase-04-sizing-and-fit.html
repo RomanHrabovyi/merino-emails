@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<title>{{ organization.name }}</title>
+<!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
+<!-- NOTE: Klaviyo HTML blocks strip <head>/<style>. This email is built to render correctly on INLINE styles alone; the media query below is a progressive enhancement only. -->
+<!--
+  ============================================================
+  FLOW: Post Purchase (new) — PATH 1 First-Time Buyer
+  EMAIL 4 "Sizing & Fit" · Day 9 (4 days after Email #3)
+  SEGMENT: first-time buyer, received Email #1 (thank-you),
+  Email #2 (care guide) and Email #3 (material story). The
+  piece may already be in their hands, so this is proactive
+  support.
+  GOAL (one): de-risk size & fit — how merino should sit, when
+  to size up, that it won't shrink if washed right, and remove
+  the fear of returning/exchanging (easy returns). Fewer
+  "wrong size" returns, more confidence for a 2nd purchase.
+  ONE primary CTA: "Find your size" (size guide; repeated in
+  this long email).
+  SERIES LOGIC: #1 thank-you / what next, #2 care guide, #3
+  material story. THIS email = fit & sizing + returns
+  reassurance ONLY. Does NOT repeat the care steps from #2 —
+  shrinkage point simply links back to that guide.
+  LINKS: no discount, so storefront/page links stay PLAIN (no
+  /discount/ wrapper). All images are clickable.
+  replace in Klaviyo:
+    {{ size_guide_url }}  -> the real size-guide / size-chart page URL
+    {{ care_guide_url }}  -> the real care-guide page URL (shrinkage ref)
+    {{ returns_url }}     -> the real returns / exchanges page URL
+  COPY: Canadian English (fibre, colour, favourite). Subject and
+  preheader kept verbatim per brief.
+  ============================================================
+-->
+<style>
+  @media only screen and (max-width:600px){
+    .container{width:100%!important}
+    .px{padding-left:20px!important;padding-right:20px!important}
+    .py{padding-top:24px!important;padding-bottom:24px!important}
+    .stack{display:block!important;width:100%!important;padding-left:0!important;padding-right:0!important}
+    .h1{font-size:26px!important}
+  }
+  a{color:#C16452;text-decoration:underline}
+</style>
+</head>
+<body style="margin:0;padding:0;background:#FFFFFF;">
+<!-- PREHEADER (kept verbatim per brief — complements subject) -->
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">How it should sit, when to size up, and our easy returns</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFFFFF;">
+  <tr><td align="center" style="padding:0;">
+    <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#FFFFFF;">
+
+      <!-- ============ HERO — RIGHT FIT = COMFORT + PERFORMANCE (CTA above the fold) ============ -->
+      <tr><td class="px py" style="padding:40px 24px;background:#F4F1EA;" align="center">
+        <!-- ЗАМІНИТИ / replace in Klaviyo: hero — person wearing a well-fitting merino base layer, close but not tight (552px wide) -->
+        <a href="{{ size_guide_url|default:'https://merinotech.ca/pages/size-guide' }}" style="text-decoration:none;"><img src="https://placehold.co/552x300/EFEAE0/9A948A?text=SIZING+%26+FIT" width="552" alt="How your merino should fit" style="display:block;width:100%;max-width:552px;border:0;border-radius:8px;margin-bottom:24px;"></a>
+        <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#BF570A;font-weight:700;">Fit &amp; sizing</p>
+        <h1 class="h1" style="text-align:center;margin:0 0 12px;font-family:Georgia,'Times New Roman',Times,serif;font-size:30px;line-height:1.2;color:#1A1917;font-weight:700;">Get the fit right, {{ first_name|default:'there' }}</h1>
+        <p style="margin:0 0 22px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Merino does its best work when it fits right &mdash; the correct fit is what turns a good layer into a warm, dry, do-anything one. So before your next piece, here&rsquo;s exactly how it should sit, when to size up, and how to land your size first time.</p>
+        <!-- PRIMARY CTA (rust) — above the fold. Plain link (no coupon wrapper). -->
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ size_guide_url|default:'https://merinotech.ca/pages/size-guide' }}" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Find your size &rarr;</center><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="{{ size_guide_url|default:'https://merinotech.ca/pages/size-guide' }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Find your size &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+      <!-- ============ BODY 1 — HOW IT SHOULD SIT (base layer vs regular, two fluid columns) ============ -->
+      <tr><td class="px py" style="padding:36px 24px 8px;background:#FFFFFF;" align="center">
+        <h2 style="text-align:center;margin:0 0 8px;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">How merino should sit</h2>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">The right fit depends on where the piece sits in your layering &mdash; and it&rsquo;s simpler than it sounds.</p>
+      </td></tr>
+      <tr><td class="px" style="padding:16px 24px 8px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <!-- base layers -->
+          <td class="stack" width="50%" valign="top" style="padding:8px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E3DED4;border-radius:8px;"><tr><td style="padding:20px;">
+              <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#BF570A;font-weight:700;">Base layers</p>
+              <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;color:#1A1917;font-weight:700;">Close to the skin</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.6;color:#5C5C5C;">A base layer should sit snug against your body &mdash; close, not tight. That contact is what lets the fibre read your temperature and wick moisture, so it keeps you warm and dry. Go for your true size here; if it feels like a second skin, it&rsquo;s right.</p>
+            </td></tr></table>
+          </td>
+          <!-- mid-layers & tops -->
+          <td class="stack" width="50%" valign="top" style="padding:8px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E3DED4;border-radius:8px;"><tr><td style="padding:20px;">
+              <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#BF570A;font-weight:700;">Mid-layers &amp; tops</p>
+              <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;color:#1A1917;font-weight:700;">Room to move &amp; layer</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.6;color:#5C5C5C;">Worn over a base layer or on its own, a mid-layer or everyday top should fall with a little ease &mdash; relaxed, with space to move and layer underneath. Your true size usually works; size up if you like a looser, roomier drape.</p>
+            </td></tr></table>
+          </td>
+        </tr></table>
+      </td></tr>
+
+      <!-- ============ BODY 2 — SIZING GUIDANCE (icon + benefit-led line each) ============ -->
+      <tr><td class="px py" style="padding:28px 24px 10px;background:#FFFFFF;" align="center">
+        <h2 style="text-align:center;margin:0 0 8px;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">When to size up &mdash; and when not to</h2>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Three quick rules take the guesswork out of your next order.</p>
+      </td></tr>
+      <tr><td class="px" style="padding:16px 24px 8px;background:#FFFFFF;">
+
+        <!-- rule 1 — true to size / between sizes -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;"><tr>
+          <td width="56" valign="top" style="padding-right:16px;">
+            <!-- ЗАМІНИТИ / replace in Klaviyo: icon — ruler / tape measure (48px) -->
+            <img src="https://placehold.co/48x48/F4F1EA/BF570A?text=1" width="48" alt="True to size for most people" style="display:block;width:48px;border:0;border-radius:24px;">
+          </td>
+          <td valign="top">
+            <p style="margin:0 0 3px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;color:#1A1917;font-weight:700;">It&rsquo;s true to size for most people</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#5C5C5C;">Order your usual size and you&rsquo;ll be right most of the time. Between two sizes? Size down for a snug base-layer feel, or up for a relaxed everyday fit &mdash; the size chart has your exact measurements either way.</p>
+          </td>
+        </tr></table>
+
+        <!-- rule 2 — size up for layering -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;"><tr>
+          <td width="56" valign="top" style="padding-right:16px;">
+            <!-- ЗАМІНИТИ / replace in Klaviyo: icon — stacked layers / plus (48px) -->
+            <img src="https://placehold.co/48x48/F4F1EA/BF570A?text=2" width="48" alt="Size up for heavy layering" style="display:block;width:48px;border:0;border-radius:24px;">
+          </td>
+          <td valign="top">
+            <p style="margin:0 0 3px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;color:#1A1917;font-weight:700;">Size up if you layer heavily</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#5C5C5C;">Planning to wear a hoodie or mid-layer over thicker clothes, or simply prefer extra room? Go one size up. For a top worn straight against the skin, stay true to size so it keeps that close, warming contact.</p>
+          </td>
+        </tr></table>
+
+        <!-- rule 3 — shrinkage / links back to care #2 -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:4px;"><tr>
+          <td width="56" valign="top" style="padding-right:16px;">
+            <!-- ЗАМІНИТИ / replace in Klaviyo: icon — no-tumble-dry / shield (48px) -->
+            <img src="https://placehold.co/48x48/F4F1EA/BF570A?text=3" width="48" alt="It won't shrink when washed right" style="display:block;width:48px;border:0;border-radius:24px;">
+          </td>
+          <td valign="top">
+            <p style="margin:0 0 3px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;color:#1A1917;font-weight:700;">It holds its size &mdash; when washed right</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#5C5C5C;">The size you order is the size you keep. Wash cold on a gentle cycle and lay flat to dry &mdash; skip the hot wash and tumble dryer, and merino won&rsquo;t shrink or lose its shape. It&rsquo;s all in your <a href="{{ care_guide_url|default:'https://merinotech.ca/pages/care-guide' }}" style="color:#C16452;text-decoration:underline;">care guide</a> if you want a refresher.</p>
+          </td>
+        </tr></table>
+
+      </td></tr>
+
+      <!-- ============ SIZE-CHART CALLOUT — primary CTA repeated (bone accent) ============ -->
+      <tr><td class="px py" style="padding:30px 24px;background:#F4F1EA;" align="center">
+        <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#BF570A;font-weight:700;">Your exact measurements</p>
+        <h2 style="text-align:center;margin:0 0 10px;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">Check the size chart in 30 seconds</h2>
+        <p style="margin:0 0 22px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Grab a tape measure, match your chest, waist and height to the chart, and you&rsquo;ll know your size for every style &mdash; for her and for him. No guessing, no surprises.</p>
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ size_guide_url|default:'https://merinotech.ca/pages/size-guide' }}" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Find your size &rarr;</center><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="{{ size_guide_url|default:'https://merinotech.ca/pages/size-guide' }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Find your size &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+      <!-- ============ RETURNS REASSURANCE — remove the last objection (risk-free exchange) ============ -->
+      <tr><td class="px py" style="padding:36px 24px 10px;background:#FFFFFF;" align="center">
+        <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#BF570A;font-weight:700;">Nothing to lose</p>
+        <h2 style="text-align:center;margin:0 0 10px;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">Not quite right? Swapping is easy</h2>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">If the size isn&rsquo;t perfect, there&rsquo;s zero risk &mdash; getting the right one is simple and stress-free.</p>
+      </td></tr>
+      <tr><td class="px" style="padding:14px 24px 8px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td class="stack" width="33.33%" valign="top" style="padding:10px 8px;" align="center">
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Free 30-day returns</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">Unworn and not right? Send it back, no charge.</p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:10px 8px;" align="center">
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Easy size swaps</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">Need another size? We&rsquo;ll exchange it quickly.</p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:10px 8px;" align="center">
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Real people to help</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">Unsure? Just reply &mdash; we&rsquo;ll find your fit.</p>
+          </td>
+        </tr></table>
+      </td></tr>
+      <tr><td class="px" style="padding:6px 24px 36px;background:#FFFFFF;" align="center">
+        <!-- replace in Klaviyo: point {{ returns_url }} at the real returns / exchanges page -->
+        <a href="{{ returns_url|default:'https://merinotech.ca/pages/returns' }}" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#C16452;font-weight:700;text-decoration:underline;">See how returns &amp; exchanges work &rarr;</a>
+      </td></tr>
+
+      <!-- ============ SOCIAL PROOF — fit-related review right at the point of doubt (intermediate dark block) ============ -->
+      <tr><td class="px py" style="padding:32px 24px 14px;background:#232323;" align="center">
+        <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;line-height:1;letter-spacing:3px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <!-- replace in Klaviyo: confirm live aggregate rating / review count from Judge.me -->
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;color:#CFCFCF;">Rated <strong style="color:#FFFFFF;">4.8/5</strong> &mdash; and &ldquo;true to size&rdquo; is what Canadians tell us most</p>
+      </td></tr>
+      <tr><td class="px" style="padding:0 24px 6px;background:#232323;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#2D2D2D;border-radius:8px;"><tr><td style="padding:20px;" align="center">
+          <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1;letter-spacing:1px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <!-- replace in Klaviyo: swap for a current fit / sizing-focused Judge.me review if preferred -->
+          <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55;color:#FFFFFF;font-style:italic;">&ldquo;Ordered my normal size and it fits perfectly &mdash; snug where a base layer should be, no bagging, no shrinking after washing. Already bought a second in another colour.&rdquo;</p>
+          <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#9A948A;">&mdash; Sarah L., verified buyer</p>
+        </td></tr></table>
+      </td></tr>
+      <tr><td style="padding:0 24px 32px;background:#232323;">&nbsp;</td></tr>
+
+      <!-- ============ CLOSING — soft bridge: question on size? / explore other sizes & styles (bone = final block, NOT dark) ============ -->
+      <tr><td class="px py" style="padding:36px 24px 10px;background:#F4F1EA;" align="center">
+        <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#BF570A;font-weight:700;">Confident in your size?</p>
+        <h2 style="text-align:center;margin:0 0 10px;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">Find your fit, then find your next piece</h2>
+        <p style="margin:0 0 22px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Check the chart once and you&rsquo;ll order with confidence every time after. Still have a question about sizing? Just reply &mdash; a real person is happy to help you dial it in.</p>
+      </td></tr>
+      <!-- PRIMARY CTA (rust) — repeats the one action -->
+      <tr><td class="px" style="padding:4px 24px 14px;background:#F4F1EA;" align="center">
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ size_guide_url|default:'https://merinotech.ca/pages/size-guide' }}" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Find your size &rarr;</center><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="{{ size_guide_url|default:'https://merinotech.ca/pages/size-guide' }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Find your size &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+        <!-- soft dual-gender links (brand sells to both) — plain text, do not compete with the one button -->
+        <p style="margin:16px 0 0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.6;color:#6B675F;">
+          <a href="https://merinotech.ca/collections/all-women" style="color:#C16452;text-decoration:underline;">Shop women&rsquo;s</a>
+          &nbsp;&middot;&nbsp;
+          <a href="https://merinotech.ca/collections/all-men" style="color:#C16452;text-decoration:underline;">Shop men&rsquo;s</a>
+        </p>
+      </td></tr>
+      <tr><td style="padding:0 24px 40px;background:#F4F1EA;">&nbsp;</td></tr>
+
+    </table>
+  </td></tr>
+</table>
+</body></html>
