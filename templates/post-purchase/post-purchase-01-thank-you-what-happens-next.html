@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<title>{{ organization.name }}</title>
+<!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
+<!-- NOTE: Klaviyo HTML blocks strip <head>/<style>. This email is built to render correctly on INLINE styles alone; the media query below is a progressive enhancement only. -->
+<!--
+  ============================================================
+  FLOW: Post Purchase (new) — PATH 1 First-Time Buyer
+  EMAIL 1 "Thank You / What Happens Next" · Day 0
+  Trigger: ~30 min after order placed.
+  SEGMENT: first-time buyer (Has Placed Order = 1, all time).
+  GOAL (one): reassure the first-time buyer, confirm they made
+  the right choice, remove buyer's remorse, set expectations for
+  what happens next (processing -> shipping -> tracking), and
+  give the merino-care basics. ONE primary CTA: "Read the care
+  guide" (repeated once in a long email).
+  Framework: reassurance-led (confirm -> explain -> teach ->
+  prove -> de-risk).
+  LINKS: transactional confirmation tied to a specific order, so
+  storefront/page links stay PLAIN (no /discount/ wrapper) and
+  this is NOT turned into a product catalogue.
+  COPY: Canadian English (fibre, colour, odour, favourite).
+  ============================================================
+-->
+<!--
+  replace in Klaviyo: map {{ order_status_url }} to the Shopify
+  order status URL for this order (Placed Order event property).
+  Default falls back to the account page so the link always
+  resolves to a live destination.
+-->
+<style>
+  @media only screen and (max-width:600px){
+    .container{width:100%!important}
+    .px{padding-left:20px!important;padding-right:20px!important}
+    .py{padding-top:24px!important;padding-bottom:24px!important}
+    .stack{display:block!important;width:100%!important;padding-left:0!important;padding-right:0!important}
+    .h1{font-size:26px!important}
+  }
+  a{color:#C16452;text-decoration:underline}
+</style>
+</head>
+<body style="margin:0;padding:0;background:#FFFFFF;">
+<!-- PREHEADER (complements subject — does not repeat it) -->
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">When it ships, how to care for it, and what to expect &mdash; everything for your first merino.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFFFFF;">
+  <tr><td align="center" style="padding:0;">
+    <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#FFFFFF;">
+
+      <!-- ============ HERO — THANK YOU + REASSURANCE (CTA above the fold) ============ -->
+      <tr><td class="px py" style="padding:40px 24px;background:#F4F1EA;" align="center">
+        <!-- ЗАМІНИТИ / replace in Klaviyo: warm hero image — folded merino layers / first unboxing, lifestyle (552px wide) -->
+        <a href="https://merinotech.ca/pages/how-to-wash-your-merino-wool" style="text-decoration:none;"><img src="https://placehold.co/552x320/EFEAE0/9A948A?text=WELCOME+TO+MERINO" width="552" alt="Your first Merino.tech order is confirmed" style="display:block;width:100%;max-width:552px;border:0;border-radius:8px;margin-bottom:24px;"></a>
+        <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#BF570A;font-weight:700;">Order confirmed</p>
+        <h1 class="h1" style="text-align:center;margin:0 0 12px;font-family:Georgia,'Times New Roman',Times,serif;font-size:30px;line-height:1.2;color:#1A1917;font-weight:700;">Thank you, {{ first_name|default:'there' }}. You chose well.</h1>
+        <p style="margin:0 0 20px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Your first Merino.tech order is in &mdash; and you&rsquo;re going to love it. Real merino wool is warm without the bulk, naturally odour-resistant, and built to last years, not seasons. It&rsquo;s confirmed and already being prepared. Nothing needed from you.</p>
+        <!-- confirmation status chip -->
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 24px;"><tr><td style="border:1px solid #E3DED4;background:#FFFFFF;border-radius:6px;padding:12px 22px;" align="center">
+          <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5;color:#1A1917;"><span style="color:#BF570A;font-weight:700;">&#10003;</span>&nbsp; Confirmed &mdash; a copy of your receipt is on its way to your inbox.</p>
+        </td></tr></table>
+        <!-- PRIMARY CTA (rust) — above the fold. Plain link (transactional, no coupon wrapper). -->
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/pages/how-to-wash-your-merino-wool" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Read the care guide &rarr;</center><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="https://merinotech.ca/pages/how-to-wash-your-merino-wool" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Read the care guide &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+      <!-- ============ BODY 1 — WHAT HAPPENS NEXT ============ -->
+      <tr><td class="px py" style="padding:36px 24px 22px;background:#FFFFFF;" align="center">
+        <h2 style="text-align:center;margin:0 0 8px;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">Here&rsquo;s what happens next</h2>
+        <!-- replace in Klaviyo: confirm the real processing / shipping window below (visible sample "2&ndash;3 business days") -->
+        <p style="margin:0 0 24px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Three simple steps &mdash; we&rsquo;ll keep you posted the whole way.</p>
+        <!-- 3-step row: processing -> shipping -> tracking -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td class="stack" width="33.33%" valign="top" style="padding:8px;" align="center">
+            <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 10px;"><tr><td width="36" height="36" align="center" valign="middle" bgcolor="#BF570A" style="width:36px;height:36px;border-radius:18px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;color:#FFFFFF;">1</td></tr></table>
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Being prepared</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">Your order is confirmed and packed with care.</p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:8px;" align="center">
+            <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 10px;"><tr><td width="36" height="36" align="center" valign="middle" bgcolor="#BF570A" style="width:36px;height:36px;border-radius:18px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;color:#FFFFFF;">2</td></tr></table>
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Ships in 2&ndash;3 business days</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">It leaves our warehouse with free Canada-wide delivery.</p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:8px;" align="center">
+            <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 10px;"><tr><td width="36" height="36" align="center" valign="middle" bgcolor="#BF570A" style="width:36px;height:36px;border-radius:18px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;color:#FFFFFF;">3</td></tr></table>
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Tracking on the way</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">A separate email with your tracking link follows once it ships.</p>
+          </td>
+        </tr></table>
+        <!-- soft secondary (plain text link, not a button) — low-pressure, does not compete with the one CTA -->
+        <p style="margin:18px 0 0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.6;color:#6B675F;">You can check your order status <a href="{{ order_status_url|default:'https://merinotech.ca/account' }}" style="color:#C16452;text-decoration:underline;">anytime here</a>.</p>
+      </td></tr>
+
+      <!-- ============ BODY 2 — CARE BASICS (leads to the full care guide = the one CTA) ============ -->
+      <tr><td class="px py" style="padding:36px 24px 10px;background:#F4F1EA;" align="center">
+        <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#BF570A;font-weight:700;">Make it last</p>
+        <h2 style="text-align:center;margin:0 0 8px;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">Caring for merino is easier than you&rsquo;d think</h2>
+        <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Three habits that keep your merino soft, fresh and in shape for years.</p>
+      </td></tr>
+      <tr><td class="px" style="padding:12px 24px 8px;background:#F4F1EA;">
+        <!-- tip 1 -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:12px;"><tr>
+          <td width="44" valign="top" style="padding-right:14px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td width="36" height="36" align="center" valign="middle" bgcolor="#232323" style="width:36px;height:36px;border-radius:18px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;color:#FFFFFF;">1</td></tr></table></td>
+          <td valign="top">
+            <p style="margin:0 0 3px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;color:#1A1917;font-weight:700;">Wash less, wash cool</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#5C5C5C;">Merino resists odour on its own, so it needs washing far less often than cotton. When you do, use a cold, gentle wool cycle.</p>
+          </td>
+        </tr></table>
+        <!-- tip 2 -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:12px;"><tr>
+          <td width="44" valign="top" style="padding-right:14px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td width="36" height="36" align="center" valign="middle" bgcolor="#232323" style="width:36px;height:36px;border-radius:18px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;color:#FFFFFF;">2</td></tr></table></td>
+          <td valign="top">
+            <p style="margin:0 0 3px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;color:#1A1917;font-weight:700;">Lay flat to dry</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#5C5C5C;">Skip the dryer. Reshape while damp and dry flat to keep the fit and softness you bought it for.</p>
+          </td>
+        </tr></table>
+        <!-- tip 3 -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:4px;"><tr>
+          <td width="44" valign="top" style="padding-right:14px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td width="36" height="36" align="center" valign="middle" bgcolor="#232323" style="width:36px;height:36px;border-radius:18px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;color:#FFFFFF;">3</td></tr></table></td>
+          <td valign="top">
+            <p style="margin:0 0 3px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;color:#1A1917;font-weight:700;">Air it out between wears</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#5C5C5C;">A few hours of fresh air refreshes merino between wears &mdash; often no wash needed at all.</p>
+          </td>
+        </tr></table>
+      </td></tr>
+      <!-- PRIMARY CTA (rust) — repeats the one action -->
+      <tr><td class="px" style="padding:12px 24px 40px;background:#F4F1EA;" align="center">
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/pages/how-to-wash-your-merino-wool" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Read the care guide &rarr;</center><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="https://merinotech.ca/pages/how-to-wash-your-merino-wool" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Read the care guide &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+      <!-- ============ SOCIAL PROOF — trust right at the point of doubt (intermediate dark block) ============ -->
+      <tr><td class="px py" style="padding:32px 24px 14px;background:#232323;" align="center">
+        <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#E8965A;font-weight:700;">You&rsquo;re in good company</p>
+        <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;line-height:1;letter-spacing:3px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <!-- replace in Klaviyo: confirm live aggregate rating / review count from Judge.me -->
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;color:#CFCFCF;">Rated <strong style="color:#FFFFFF;">4.8/5</strong> &mdash; join thousands of Canadians who made merino their everyday layer</p>
+      </td></tr>
+      <tr><td class="px" style="padding:0 24px 6px;background:#232323;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#2D2D2D;border-radius:8px;"><tr><td style="padding:20px;" align="center">
+          <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1;letter-spacing:1px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <!-- replace in Klaviyo: swap for a current first-purchase Judge.me review if preferred -->
+          <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55;color:#FFFFFF;font-style:italic;">&ldquo;First time trying merino and I&rsquo;m converted. Warm without feeling heavy, and it genuinely doesn&rsquo;t hold odour. Wish I&rsquo;d switched years ago.&rdquo;</p>
+          <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#9A948A;">&mdash; Sarah L., verified buyer</p>
+        </td></tr></table>
+      </td></tr>
+      <tr><td style="padding:0 24px 32px;background:#232323;">&nbsp;</td></tr>
+
+      <!-- ============ CLOSING — remove the last objection (light, on white = final block) ============ -->
+      <tr><td class="px py" style="padding:36px 24px 8px;background:#FFFFFF;" align="center">
+        <h2 style="text-align:center;margin:0 0 8px;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">You&rsquo;re covered, either way</h2>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">If your first piece isn&rsquo;t quite right, we&rsquo;ll make it easy to sort out.</p>
+      </td></tr>
+      <tr><td class="px" style="padding:12px 24px 36px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td class="stack" width="33.33%" valign="top" style="padding:10px 8px;" align="center">
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;"><a href="https://merinotech.ca/pages/easy-free-returns-up-to-30-days" style="color:#1A1917;text-decoration:none;">Free 30-day returns</a></p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">Changed your mind? Send it back, easy.</p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:10px 8px;" align="center">
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;"><a href="https://merinotech.ca/pages/size-guide" style="color:#1A1917;text-decoration:none;">Sizing help</a></p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">Not sure on fit? Our size guide has you.</p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:10px 8px;" align="center">
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Here to help</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">Questions? Just reply &mdash; a real person answers.</p>
+          </td>
+        </tr></table>
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+</body></html>
