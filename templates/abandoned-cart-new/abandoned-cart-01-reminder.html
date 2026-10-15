@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<title>{{ organization.name }}</title>
+<!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
+<!-- NOTE: Klaviyo HTML blocks strip <head>/<style>. This email is built to render correctly on INLINE styles alone; the media query below is a progressive enhancement only. -->
+<!--
+  ============================================================
+  FLOW: Abandoned Cart (new) — EMAIL 1 "Reminder" · Day 0
+  Trigger: ~1 hour after checkout started / cart abandoned.
+  SEGMENT: started checkout, did not complete.
+  GOAL (one): bring them back to finish checkout. Low-pressure
+  reminder — the cart is saved, here's what's in it, one click
+  back. ONE primary CTA: "Complete your order".
+  NO DISCOUNT in this step — incentive is saved for a later
+  abandoned-cart email (#2/#3). Framework: light PAS (you left
+  something -> it's still here, risk-free -> go finish).
+  CART: show the customer's actual items via Klaviyo's dynamic
+  cart/catalog block (loop commented below); the static card is
+  a fallback only.
+  LINKS: transactional recovery link stays PLAIN (no /discount/
+  wrapper). All images clickable.
+  COPY: Canadian English (fibre, colour, odour, favourite).
+  ASSUMPTIONS (brief was folder+branch only — confirm/adjust):
+    - step #1 reminder, ~1h delay; no code; CTA "Complete your
+      order"; dynamic cart block shown. Change any of these and
+      the copy/offer block adjusts.
+  ============================================================
+-->
+<!--
+  replace in Klaviyo: map {{ checkout_url }} to the abandoned
+  checkout recovery URL (Started Checkout / Checkout event
+  property, e.g. event.extra.checkout_url). Default falls back
+  to the cart page so the button always resolves.
+-->
+<style>
+  @media only screen and (max-width:600px){
+    .container{width:100%!important}
+    .px{padding-left:20px!important;padding-right:20px!important}
+    .py{padding-top:24px!important;padding-bottom:24px!important}
+    .stack{display:block!important;width:100%!important;padding-left:0!important;padding-right:0!important}
+    .h1{font-size:26px!important}
+  }
+  a{color:#C16452;text-decoration:underline}
+</style>
+</head>
+<body style="margin:0;padding:0;background:#FFFFFF;">
+<!-- PREHEADER (complements subject — does not repeat it) -->
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Your cart&rsquo;s saved &mdash; pick up right where you left off.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFFFFF;">
+  <tr><td align="center" style="padding:0;">
+    <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#FFFFFF;">
+
+      <!-- ============ HERO — you left something behind, it's saved (CTA above the fold) ============ -->
+      <tr><td class="px py" style="padding:40px 24px;background:#F4F1EA;" align="center">
+        <!-- ЗАМІНИТИ / replace in Klaviyo: warm hero — folded merino / the product in cart, lifestyle (552px wide) -->
+        <a href="{{ checkout_url|default:'https://merinotech.ca/cart' }}" style="text-decoration:none;"><img src="https://placehold.co/552x300/EFEAE0/9A948A?text=STILL+IN+YOUR+CART" width="552" alt="The merino you left in your cart" style="display:block;width:100%;max-width:552px;border:0;border-radius:8px;margin-bottom:24px;"></a>
+        <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#BF570A;font-weight:700;">Still in your cart</p>
+        <h1 class="h1" style="text-align:center;margin:0 0 12px;font-family:Georgia,'Times New Roman',Times,serif;font-size:30px;line-height:1.2;color:#1A1917;font-weight:700;">You left something behind, {{ first_name|default:'there' }}</h1>
+        <p style="margin:0 0 22px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">No rush &mdash; we&rsquo;ve kept your cart exactly as you left it. When you&rsquo;re ready, picking up where you stopped takes just one click.</p>
+        <!-- PRIMARY CTA (rust) — above the fold. Plain recovery link (no coupon wrapper). -->
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ checkout_url|default:'https://merinotech.ca/cart' }}" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Complete your order &rarr;</center><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="{{ checkout_url|default:'https://merinotech.ca/cart' }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Complete your order &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+      <!-- ============ CART ITEMS — dynamic Klaviyo cart block (static card = fallback) ============ -->
+      <tr><td class="px py" style="padding:36px 24px 8px;background:#FFFFFF;" align="center">
+        <h2 style="text-align:center;margin:0 0 6px;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">Here&rsquo;s what&rsquo;s waiting</h2>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Ready to ship, free across Canada.</p>
+      </td></tr>
+
+      <!--
+        KLAVIYO DYNAMIC CART (preferred):
+        Replace the static fallback card below with Klaviyo's abandoned-cart
+        item loop so the email shows the customer's actual items. Reference
+        tag shape (adjust to your event property):
+          {% for item in event.extra.line_items %}
+            <img src="{{ item.product.image_url }}" alt="{{ item.product.title }}">
+            {{ item.product.title }} — {{ item.line_price }} — {{ item.product.url }}
+          {% endfor %}
+        Keep the static card as the fallback for when the feed is empty.
+      -->
+
+      <!-- STATIC FALLBACK CARD — one representative item (replace with dynamic cart in Klaviyo) -->
+      <tr><td class="px" style="padding:12px 24px 8px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E3DED4;border-radius:8px;"><tr>
+          <td width="140" valign="top" style="padding:14px;">
+            <!-- ЗАМІНИТИ / replace in Klaviyo: dynamic cart item image -->
+            <a href="{{ checkout_url|default:'https://merinotech.ca/cart' }}" style="text-decoration:none;"><img src="https://placehold.co/240x240/F7F7F8/9A948A?text=YOUR+ITEM" width="240" alt="Merino item in your cart" style="display:block;width:100%;max-width:140px;border:0;border-radius:6px;"></a>
+          </td>
+          <td valign="middle" style="padding:14px 14px 14px 0;">
+            <!-- replace in Klaviyo: dynamic item title / variant / price -->
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;color:#1A1917;font-weight:700;">Merino 190 Base Layer</p>
+            <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5;color:#6B675F;">The everyday layer you had your eye on &mdash; soft, warm, breathable.</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">$119.00</p>
+          </td>
+        </tr></table>
+      </td></tr>
+      <!-- PRIMARY CTA (rust) — repeat right under the cart -->
+      <tr><td class="px" style="padding:16px 24px 36px;background:#FFFFFF;" align="center">
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ checkout_url|default:'https://merinotech.ca/cart' }}" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Complete your order &rarr;</center><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="{{ checkout_url|default:'https://merinotech.ca/cart' }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Complete your order &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+      <!-- ============ REASSURANCE — remove the reasons people stall (bone trust bar) ============ -->
+      <tr><td class="px py" style="padding:30px 24px 8px;background:#F4F1EA;" align="center">
+        <h2 style="text-align:center;margin:0 0 4px;font-family:Georgia,'Times New Roman',Times,serif;font-size:20px;line-height:1.3;color:#1A1917;font-weight:700;">Nothing to lose by finishing</h2>
+      </td></tr>
+      <tr><td class="px" style="padding:8px 24px 32px;background:#F4F1EA;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td class="stack" width="33.33%" valign="top" style="padding:10px 8px;" align="center">
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Free Canada-wide shipping</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">On every order, no minimum.</p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:10px 8px;" align="center">
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Free 30-day returns</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">Changed your mind? Send it back, easy.</p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:10px 8px;" align="center">
+            <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">True-to-size fit</p>
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5C5C5C;">Wrong size? Swap it, on us.</p>
+          </td>
+        </tr></table>
+      </td></tr>
+
+      <!-- ============ SOCIAL PROOF — nudge at the point of doubt (intermediate dark block) ============ -->
+      <tr><td class="px py" style="padding:32px 24px 14px;background:#232323;" align="center">
+        <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;line-height:1;letter-spacing:3px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <!-- replace in Klaviyo: confirm live aggregate rating / review count from Judge.me -->
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;color:#CFCFCF;">Rated <strong style="color:#FFFFFF;">4.8/5</strong> &mdash; loved by thousands of Canadians</p>
+      </td></tr>
+      <tr><td class="px" style="padding:0 24px 6px;background:#232323;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#2D2D2D;border-radius:8px;"><tr><td style="padding:20px;" align="center">
+          <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1;letter-spacing:1px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <!-- replace in Klaviyo: swap for a current Judge.me review if preferred -->
+          <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55;color:#FFFFFF;font-style:italic;">&ldquo;I hesitated before my first order &mdash; so glad I didn&rsquo;t wait. It&rsquo;s the warmest, comfiest layer I own, and it never smells. Should&rsquo;ve bought one sooner.&rdquo;</p>
+          <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#9A948A;">&mdash; Emily C., verified buyer</p>
+        </td></tr></table>
+      </td></tr>
+      <tr><td style="padding:0 24px 32px;background:#232323;">&nbsp;</td></tr>
+
+      <!-- ============ CLOSING — low-pressure, cart saved + repeat CTA (bone = final block, NOT dark) ============ -->
+      <tr><td class="px py" style="padding:36px 24px 10px;background:#F4F1EA;" align="center">
+        <h2 style="text-align:center;margin:0 0 10px;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">Your cart&rsquo;s saved for you</h2>
+        <p style="margin:0 0 22px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Take your time. When you&rsquo;re ready, everything&rsquo;s right where you left it &mdash; and we&rsquo;re here if you have any questions.</p>
+      </td></tr>
+      <tr><td class="px" style="padding:4px 24px 14px;background:#F4F1EA;" align="center">
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ checkout_url|default:'https://merinotech.ca/cart' }}" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Complete your order &rarr;</center><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="{{ checkout_url|default:'https://merinotech.ca/cart' }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Complete your order &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+        <!-- soft secondary (plain text link) — keep browsing, does not compete with the one button -->
+        <p style="margin:16px 0 0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.6;color:#6B675F;">Or <a href="https://merinotech.ca/collections/all" style="color:#C16452;text-decoration:underline;">keep browsing the collection</a>.</p>
+      </td></tr>
+      <tr><td style="padding:0 24px 40px;background:#F4F1EA;">&nbsp;</td></tr>
+
+    </table>
+  </td></tr>
+</table>
+</body></html>
