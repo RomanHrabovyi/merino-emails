@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<title>{{ organization.name }}</title>
+<!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
+<!-- Abandoned Cart (new) · Email #4 "Returning customer" · Day 2 · conditional split branch "Everyone else" (NOT first-time buyers). Parallel to Email #3 (New customer branch). -->
+<!-- NOTE: Klaviyo HTML blocks strip <head>/<style>. This email renders correctly on INLINE styles alone; the media query below is a progressive enhancement only. -->
+<style>
+  @media only screen and (max-width:600px){
+    .container{width:100%!important}
+    .px{padding-left:20px!important;padding-right:20px!important}
+    .py{padding-top:24px!important;padding-bottom:24px!important}
+    .stack{display:block!important;width:100%!important;padding-left:0!important;padding-right:0!important}
+    .cart-img{width:104px!important}
+    .h1{font-size:26px!important}
+  }
+  a{color:#C16452;text-decoration:underline}
+</style>
+</head>
+<body style="margin:0;padding:0;background:#FFFFFF;">
+
+<!-- PREHEADER (approved in Klaviyo) — complements the subject, does not repeat it -->
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all;">Your saved items are one click from checkout.</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFFFFF;">
+  <tr><td align="center" style="padding:0;">
+    <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#FFFFFF;">
+
+      <!-- ============ 1. HERO — warm welcome back + primary CTA above the fold ============ -->
+      <tr><td class="px py" style="padding:40px 24px;background:#F4F1EA;" align="center">
+        <!-- ЗАМІНИТИ / REPLACE IN KLAVIYO: hero image — folded merino base layers, men's + women's, warm neutral styling (552px wide). Links back to the saved checkout. -->
+        <a href="{{ event.extra.checkout_url }}" style="text-decoration:none;"><img src="https://placehold.co/552x300/EFEAE0/9A948A?text=WELCOME+BACK" width="552" alt="Folded Merino.tech wool base layers, saved and ready to ship" style="display:block;width:100%;max-width:552px;border:0;border-radius:8px;margin-bottom:24px;"></a>
+        <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#BF570A;font-weight:700;">Welcome back</p>
+        <h1 class="h1" style="text-align:center;margin:0 0 12px;font-family:Georgia,'Times New Roman',Times,serif;font-size:30px;line-height:1.2;color:#1A1917;font-weight:700;">Your cart&rsquo;s right<br>where you left it</h1>
+        <p style="margin:0 0 26px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Good to see you again, {{ first_name|default:'there' }}. We&rsquo;ve kept your picks saved exactly as they were &mdash; you&rsquo;re just one quick step from checkout.</p>
+        <!-- PRIMARY CTA (single — resume checkout) -->
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ event.extra.checkout_url }}" style="height:48px;v-text-anchor:middle;width:260px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Finish checking out &rarr;</center></v:roundrect><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="{{ event.extra.checkout_url }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 36px;">Finish checking out &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+      <!-- ============ 2. DYNAMIC CART BLOCK — THE hero of this email (returning buyers are driven by the cart itself, not by re-selling merino) ============ -->
+      <!-- REPLACE / VERIFY IN KLAVIYO: this loop assumes the Shopify "Checkout Started" trigger (event.extra.line_items + event.extra.checkout_url).
+           If your "Abandoned Cart (new)" flow uses a different trigger, map these fields to that event's variables
+           (common image fallbacks: item.product.images.0 or item.image_url; title fallback: item.product.title; price fallback: item.line_price).
+           >>> Roma: paste the Klaviyo-generated product block here if you prefer, or keep the {% for %} loop below. <<< -->
+      <tr><td class="px" style="padding:40px 24px 8px;background:#FFFFFF;" align="center">
+        <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#C16452;font-weight:700;">Still in your cart</p>
+        <h2 style="text-align:center;margin:0;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">Everything&rsquo;s still here</h2>
+      </td></tr>
+
+      <tr><td class="px" style="padding:20px 24px 4px;background:#FFFFFF;">
+        {% for item in event.extra.line_items %}
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E3DED4;border-radius:10px;background:#F4F1EA;margin-bottom:14px;">
+          <tr>
+            <td valign="middle" width="128" style="width:128px;padding:14px;">
+              <a href="{{ event.extra.checkout_url }}" style="text-decoration:none;"><img class="cart-img" src="{{ item.product.images.0 }}" width="104" alt="{{ item.title }}" style="display:block;width:104px;max-width:104px;border:0;border-radius:8px;background:#FFFFFF;"></a>
+            </td>
+            <td valign="middle" style="padding:14px 18px 14px 0;">
+              <p style="margin:0 0 5px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.35;color:#1A1917;font-weight:700;"><a href="{{ event.extra.checkout_url }}" style="color:#1A1917;text-decoration:none;">{{ item.title }}</a></p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5;color:#5C5C5C;">Qty {{ item.quantity }} &nbsp;&middot;&nbsp; <span style="color:#1A1917;font-weight:700;">{{ item.line_price }}</span></p>
+            </td>
+          </tr>
+        </table>
+        {% endfor %}
+      </td></tr>
+
+      <!-- CTA directly under the cart — the main driver for returning buyers -->
+      <tr><td class="px" style="padding:14px 24px 40px;background:#FFFFFF;" align="center">
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ event.extra.checkout_url }}" style="height:48px;v-text-anchor:middle;width:260px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Finish checking out &rarr;</center></v:roundrect><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="{{ event.extra.checkout_url }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 36px;">Finish checking out &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+      <!-- ============ 3. QUIET CONFIRMATION — no benefit lecture, just a nod to what they already know + one restrained line of social proof ============ -->
+      <tr><td class="px py" style="padding:34px 24px;background:#F4F1EA;" align="center">
+        <p style="margin:0 0 10px;font-family:Georgia,'Times New Roman',Times,serif;font-size:20px;line-height:1.4;color:#1A1917;">The comfort you already know &mdash;<br>the pieces you keep coming back to.</p>
+        <p style="margin:0 0 14px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#5C5C5C;">No need to think this one over. You know how it feels.</p>
+        <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;line-height:1;letter-spacing:3px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <!-- REPLACE IN KLAVIYO: swap for live Judge.me rating if you want an exact figure -->
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#6B675F;">Loved by thousands of Canadians</p>
+      </td></tr>
+
+      <!-- ============ 4. CONVENIENCE — remove the last friction, speed over persuasion (badges) ============ -->
+      <tr><td class="px py" style="padding:40px 24px 8px;background:#FFFFFF;" align="center">
+        <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#C16452;font-weight:700;">Quick and easy</p>
+        <h2 style="text-align:center;margin:0;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">A few seconds to finish</h2>
+      </td></tr>
+
+      <tr><td class="px" style="padding:22px 24px 16px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="stack" valign="top" width="50%" style="width:50%;padding:0 8px 20px;" align="center">
+              <!-- ЗАМІНИТИ / REPLACE IN KLAVIYO: icon — saved cart / bookmark (48px) -->
+              <a href="{{ event.extra.checkout_url }}" style="text-decoration:none;"><img src="https://placehold.co/48x48/FFFFFF/BF570A?text=%E2%9C%93" width="48" alt="Cart saved" style="display:block;width:48px;max-width:48px;border:0;margin:0 auto 10px;"></a>
+              <p style="margin:0 0 3px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Your cart is saved</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#6B675F;">Sizes and quantities, kept exactly as you left them.</p>
+            </td>
+            <td class="stack" valign="top" width="50%" style="width:50%;padding:0 8px 20px;" align="center">
+              <!-- ЗАМІНИТИ / REPLACE IN KLAVIYO: icon — fast checkout / lightning (48px) -->
+              <a href="{{ event.extra.checkout_url }}" style="text-decoration:none;"><img src="https://placehold.co/48x48/FFFFFF/BF570A?text=%E2%9A%A1" width="48" alt="Fast checkout" style="display:block;width:48px;max-width:48px;border:0;margin:0 auto 10px;"></a>
+              <p style="margin:0 0 3px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Fast checkout</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#6B675F;">Your details on file &mdash; done in a couple of taps.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="stack" valign="top" width="50%" style="width:50%;padding:0 8px 20px;" align="center">
+              <!-- ЗАМІНИТИ / REPLACE IN KLAVIYO: icon — free shipping / truck (48px) -->
+              <a href="{{ event.extra.checkout_url }}" style="text-decoration:none;"><img src="https://placehold.co/48x48/FFFFFF/BF570A?text=%E2%86%92" width="48" alt="Free shipping" style="display:block;width:48px;max-width:48px;border:0;margin:0 auto 10px;"></a>
+              <p style="margin:0 0 3px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Free shipping</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#6B675F;">On orders over CAD&nbsp;$65, right to your door.</p>
+            </td>
+            <td class="stack" valign="top" width="50%" style="width:50%;padding:0 8px 20px;" align="center">
+              <!-- ЗАМІНИТИ / REPLACE IN KLAVIYO: icon — easy returns / arrows (48px) -->
+              <a href="https://merinotech.ca/pages/easy-free-returns-up-to-30-days" style="text-decoration:none;"><img src="https://placehold.co/48x48/FFFFFF/BF570A?text=%E2%86%BA" width="48" alt="Easy 30-day returns" style="display:block;width:48px;max-width:48px;border:0;margin:0 auto 10px;"></a>
+              <p style="margin:0 0 3px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;color:#1A1917;font-weight:700;">Easy 30-day returns</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#6B675F;">Free returns and exchanges, right across Canada.</p>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ========================================================================================= -->
+      <!-- ============ 5. [OPTIONAL] LOYALTY INCENTIVE — OFF BY DEFAULT ============ -->
+      <!-- UNCOMMENT IF LOYALTY INCENTIVE: this email is about convenience, not discounting. Only switch this -->
+      <!-- block on if Roma wants to add a small thank-you for a returning customer. The {{ coupon_code }} tag -->
+      <!-- below must map to a REAL working Klaviyo/Shopify code (default 'THANKYOU10' is only a fallback). -->
+      <!-- Code is entered at checkout; the checkout_url already carries their saved cart. -->
+      <!--
+      <tr><td class="px py" style="padding:40px 24px;background:#232323;" align="center">
+        <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#E8965A;font-weight:700;">A little thank-you</p>
+        <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:34px;line-height:1.1;color:#C20000;font-weight:700;">10% OFF</p>
+        <p style="margin:0 0 18px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#CFCFCF;">for coming back. Apply the code at checkout:</p>
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 22px;"><tr><td style="border:2px dashed #E8965A;border-radius:6px;padding:12px 28px;" align="center">
+          <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;letter-spacing:3px;color:#FFFFFF;font-weight:700;">{{ coupon_code|default:'THANKYOU10' }}</span>
+        </td></tr></table>
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          [if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ event.extra.checkout_url }}" style="height:48px;v-text-anchor:middle;width:260px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Finish checking out &rarr;</center></v:roundrect><![endif]
+          <a href="{{ event.extra.checkout_url }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 36px;">Finish checking out &rarr;</a>
+        </td></tr></table>
+      </td></tr>
+      -->
+      <!-- ============ END [OPTIONAL] LOYALTY INCENTIVE ============ -->
+      <!-- ========================================================================================= -->
+
+      <!-- ============ 6. REPEAT PRIMARY CTA — bone accent band ============ -->
+      <tr><td class="px py" style="padding:40px 24px;background:#F4F1EA;" align="center">
+        <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#BF570A;font-weight:700;">Your favourites are waiting</p>
+        <p style="margin:0 0 20px;font-family:Georgia,'Times New Roman',Times,serif;font-size:26px;line-height:1.2;color:#1A1917;font-weight:700;">Pick up where you left off</p>
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ event.extra.checkout_url }}" style="height:48px;v-text-anchor:middle;width:260px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Finish checking out &rarr;</center></v:roundrect><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="{{ event.extra.checkout_url }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 36px;">Finish checking out &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+        <p style="margin:18px 0 0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#6B675F;">Prefer to keep looking? <a href="https://merinotech.ca/collections/all-women" style="color:#C16452;text-decoration:underline;">Women&rsquo;s</a> &nbsp;&middot;&nbsp; <a href="https://merinotech.ca/collections/all-men" style="color:#C16452;text-decoration:underline;">Men&rsquo;s</a></p>
+      </td></tr>
+
+      <!-- ============ 7. CLOSING — last friction removed (free returns / easy size swap) ============ -->
+      <tr><td class="px py" style="padding:32px 24px 36px;background:#FFFFFF;" align="center">
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.7;color:#5C5C5C;">Need a different size? Swap it easily &mdash; <a href="https://merinotech.ca/pages/easy-free-returns-up-to-30-days" style="color:#C16452;text-decoration:underline;font-weight:700;">free 30-day returns and exchanges</a> across Canada, no questions asked. We&rsquo;re here if you need a hand.</p>
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+</body></html>
