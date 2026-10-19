@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<title>{{ organization.name }}</title>
+<!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
+<!-- NOTE: Klaviyo HTML blocks strip <head>/<style>. This email renders correctly on INLINE styles alone; the media query below is a progressive enhancement only. -->
+<!--
+  ============================================================
+  FLOW: Abandoned Cart (new) — EMAIL 3 "New customer" · Day 2
+  Conditional split Path #1 "New customer"
+  (Has Placed Order zero times over all time) = first-time buyers.
+  JOB: remove the fear of a FIRST order — size uncertainty,
+  "is it worth it", risk it won't fit. Do NOT repeat #1
+  (reminder) or #2 (benefits/BAB): here the risk-reversal
+  carries the persuasion. Framework: PAS for a first buyer
+  (size/quality/fit doubt -> that's exactly what stalls you ->
+  solve with fit help + real reviews + worry-free returns).
+  ONE primary CTA: "Complete my first order".
+  LINKS: transactional recovery link stays PLAIN (no /discount/
+  wrapper) UNLESS the optional first-order incentive is enabled.
+  COPY: Canadian English (fibre, colour, odour, favourite).
+  ============================================================
+-->
+<style>
+  @media only screen and (max-width:600px){
+    .container{width:100%!important}
+    .px{padding-left:20px!important;padding-right:20px!important}
+    .py{padding-top:24px!important;padding-bottom:24px!important}
+    .stack{display:block!important;width:100%!important;padding-left:0!important;padding-right:0!important}
+    .cart-img{width:72px!important}
+    .h1{font-size:26px!important}
+  }
+  a{color:#C16452;text-decoration:underline}
+</style>
+</head>
+<body style="margin:0;padding:0;background:#FFFFFF;">
+
+<!-- PREHEADER — complements the subject, does not repeat it -->
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all;">Find your fit, read real reviews, and order worry-free.</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFFFFF;">
+  <tr><td align="center" style="padding:0;">
+    <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#FFFFFF;">
+
+      <!-- ============ 1. HERO — confidence in your first order + primary CTA above the fold ============ -->
+      <tr><td class="px py" style="padding:40px 24px;background:#F4F1EA;" align="center">
+        <!-- ЗАМІНИТИ / REPLACE IN KLAVIYO: hero image — first-order feel, one merino layer worn with ease (men's or women's), warm neutral styling (552px wide). Links back to the saved checkout. -->
+        <a href="{{ event.extra.checkout_url }}" style="text-decoration:none;"><img src="https://placehold.co/552x320/EFEAE0/9A948A?text=YOUR+FIRST+MERINO" width="552" alt="Merino.tech wool base layer, easy first order" style="display:block;width:100%;max-width:552px;border:0;border-radius:8px;margin-bottom:24px;"></a>
+        <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#BF570A;font-weight:700;">Your first order, made easy</p>
+        <h1 class="h1" style="text-align:center;margin:0 0 12px;font-family:Georgia,'Times New Roman',Times,serif;font-size:30px;line-height:1.2;color:#1A1917;font-weight:700;">Feel confident about<br>your first order</h1>
+        <p style="margin:0 0 26px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Hi {{ first_name|default:'there' }}, a first order shouldn&rsquo;t feel like a gamble. We&rsquo;ll help you land the right size, show you what other Canadians think, and back it with worry-free returns &mdash; so there&rsquo;s nothing to second-guess.</p>
+        <!-- PRIMARY CTA (single — resume checkout) -->
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ event.extra.checkout_url }}" style="height:48px;v-text-anchor:middle;width:280px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Complete my first order &rarr;</center></v:roundrect><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="{{ event.extra.checkout_url }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Complete my first order &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+      <!-- ============ 2. FIT HELP — closes objection #1 for new buyers (size) ============ -->
+      <tr><td class="px py" style="padding:34px 24px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E3DED4;border-radius:8px;background:#FFFFFF;">
+          <tr>
+            <td valign="middle" width="84" style="width:84px;padding:18px 0 18px 18px;" align="center">
+              <!-- ЗАМІНИТИ / REPLACE IN KLAVIYO: icon — ruler / fit finder (56px) -->
+              <a href="https://merinotech.ca/pages/size-guide" style="text-decoration:none;"><img src="https://placehold.co/56x56/F4F1EA/BF570A?text=FIT" width="56" alt="Find your size" style="display:block;width:56px;max-width:56px;border:0;"></a>
+            </td>
+            <td valign="middle" style="padding:18px;">
+              <p style="margin:0 0 4px;font-family:Georgia,'Times New Roman',Times,serif;font-size:18px;line-height:1.3;color:#1A1917;font-weight:700;">Not sure on size?</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.6;color:#5C5C5C;">Our <a href="https://merinotech.ca/pages/size-guide" style="color:#C16452;text-decoration:underline;font-weight:700;">size guide</a> has exact measurements, so you can pick your fit in under a minute &mdash; and if it&rsquo;s not right, exchanges are free.</p>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ============ 3. SOCIAL PROOF — strong block, new buyers need evidence (Judge.me stars #F2D300) ============ -->
+      <tr><td class="px py" style="padding:36px 24px 18px;background:#232323;" align="center">
+        <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;line-height:1;letter-spacing:3px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <!-- REPLACE IN KLAVIYO: set the real aggregate rating + review count from Judge.me (e.g. 4.8/5 from 12,000+ reviews) -->
+        <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.4;color:#FFFFFF;font-weight:700;">Rated 4.8 / 5 by thousands of Canadians</p>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#CFCFCF;">Over 12,000 verified reviews</p>
+      </td></tr>
+
+      <tr><td class="px" style="padding:4px 24px 36px;background:#232323;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="stack" valign="top" width="50%" style="width:50%;padding:0 10px 18px;" align="center">
+              <!-- REPLACE IN KLAVIYO: swap for a live Judge.me review — ideally one mentioning fit -->
+              <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1;letter-spacing:1px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              <p style="margin:0 0 8px;font-family:Georgia,'Times New Roman',Times,serif;font-size:16px;line-height:1.5;color:#FFFFFF;font-style:italic;">&ldquo;First time ordering and the size guide was spot on &mdash; fits perfectly. Softer than I expected, too.&rdquo;</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#9A948A;">&mdash; Priya S., first-time buyer</p>
+            </td>
+            <td class="stack" valign="top" width="50%" style="width:50%;padding:0 10px 18px;" align="center">
+              <!-- REPLACE IN KLAVIYO: swap for a live Judge.me review — ideally one mentioning quality -->
+              <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1;letter-spacing:1px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              <p style="margin:0 0 8px;font-family:Georgia,'Times New Roman',Times,serif;font-size:16px;line-height:1.5;color:#FFFFFF;font-style:italic;">&ldquo;Was hesitant to spend on my first one. Zero regrets &mdash; the quality is obvious the moment you put it on.&rdquo;</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#9A948A;">&mdash; Daniel W., verified buyer</p>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ============ 4. RISK REVERSAL — "order worry-free" badges (carries the persuasion) ============ -->
+      <tr><td class="px py" style="padding:36px 24px 8px;background:#F4F1EA;" align="center">
+        <h2 style="text-align:center;margin:0 0 4px;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">Order worry-free</h2>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#5C5C5C;">Every first order is covered, three ways.</p>
+      </td></tr>
+      <tr><td class="px py" style="padding:18px 24px 32px;background:#F4F1EA;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="stack" valign="top" width="33.33%" style="width:33.33%;padding:0 8px 16px;" align="center">
+              <!-- ЗАМІНИТИ / REPLACE IN KLAVIYO: badge icon — 30-day returns (48px) -->
+              <a href="https://merinotech.ca/pages/easy-free-returns-up-to-30-days" style="text-decoration:none;"><img src="https://placehold.co/48x48/F4F1EA/BF570A?text=30" width="48" alt="Free 30-day returns" style="display:block;width:48px;max-width:48px;border:0;margin:0 auto 10px;"></a>
+              <p style="margin:0 0 3px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;color:#1A1917;font-weight:700;">30-day easy returns</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#6B675F;">Didn&rsquo;t fit? Free returns &amp; exchanges across Canada.</p>
+            </td>
+            <td class="stack" valign="top" width="33.33%" style="width:33.33%;padding:0 8px 16px;" align="center">
+              <!-- ЗАМІНИТИ / REPLACE IN KLAVIYO: badge icon — free shipping (48px) -->
+              <a href="{{ event.extra.checkout_url }}" style="text-decoration:none;"><img src="https://placehold.co/48x48/F4F1EA/BF570A?text=SHIP" width="48" alt="Free shipping over CAD $65" style="display:block;width:48px;max-width:48px;border:0;margin:0 auto 10px;"></a>
+              <p style="margin:0 0 3px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;color:#1A1917;font-weight:700;">Free shipping</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#6B675F;">On orders over CAD&nbsp;$65, right to your door.</p>
+            </td>
+            <td class="stack" valign="top" width="33.33%" style="width:33.33%;padding:0 8px 16px;" align="center">
+              <!-- ЗАМІНИТИ / REPLACE IN KLAVIYO: badge icon — warranty (48px). replace link with real warranty page if one exists -->
+              <a href="{{ event.extra.checkout_url }}" style="text-decoration:none;"><img src="https://placehold.co/48x48/F4F1EA/BF570A?text=WRTY" width="48" alt="Warranty-backed quality" style="display:block;width:48px;max-width:48px;border:0;margin:0 auto 10px;"></a>
+              <p style="margin:0 0 3px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;color:#1A1917;font-weight:700;">Warranty-backed</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#6B675F;">Quality you can count on, wear after wear.</p>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ============ 5. OPTIONAL FIRST-ORDER INCENTIVE ============ -->
+      <!-- UNCOMMENT IF FIRST-ORDER INCENTIVE: a small welcome offer for first-time buyers.
+           OFF by default — this email is framed on confidence, not discount. If enabled, also wrap
+           EVERY storefront link in a discount link so the code auto-applies, e.g.:
+           https://merinotech.ca/discount/{{ coupon_code|default:'WELCOME10' }}?redirect=/collections/all
+           and set the CTA hrefs to the checkout_url carrying the code.
+      <tr><td class="px py" style="padding:40px 24px;background:#232323;" align="center">
+        <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#E8965A;font-weight:700;">A little welcome</p>
+        <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:34px;line-height:1.1;color:#FFFFFF;font-weight:700;">10% OFF</p>
+        <p style="margin:0 0 18px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#CFCFCF;">your first order. Apply the code at checkout:</p>
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 22px;"><tr><td style="border:2px dashed #E8965A;border-radius:6px;padding:12px 28px;" align="center">
+          <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;letter-spacing:3px;color:#FFFFFF;font-weight:700;">{{ coupon_code|default:'WELCOME10' }}</span>
+        </td></tr></table>
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <a href="{{ event.extra.checkout_url }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Complete my first order &rarr;</a>
+        </td></tr></table>
+      </td></tr>
+      END OPTIONAL FIRST-ORDER INCENTIVE -->
+
+      <!-- ============ 6. CART SAVED — light reminder + compact dynamic cart ============ -->
+      <tr><td class="px" style="padding:34px 24px 6px;background:#FFFFFF;" align="center">
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#5C5C5C;">And don&rsquo;t worry &mdash; your cart is still saved, exactly as you left it.</p>
+      </td></tr>
+
+      <!-- REPLACE / VERIFY IN KLAVIYO: this loop assumes the Shopify "Checkout Started" trigger (event.extra.line_items + event.extra.checkout_url).
+           If your "Abandoned Cart (new)" flow uses a different trigger, map these fields to that event's variables
+           (common fallbacks: item.product.images.0 or item.image_url for the image; item.product.title for the title).
+           >>> Compact on purpose — the detailed cart lives in email #1. <<< -->
+      <tr><td class="px" style="padding:14px 24px 4px;background:#FFFFFF;">
+        {% for item in event.extra.line_items %}
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-bottom:1px solid #EFEAE0;">
+          <tr>
+            <td valign="middle" width="92" style="width:92px;padding:10px 0;">
+              <a href="{{ event.extra.checkout_url }}" style="text-decoration:none;"><img class="cart-img" src="{{ item.product.images.0 }}" width="72" alt="{{ item.title }}" style="display:block;width:72px;max-width:72px;border:0;border-radius:6px;background:#F7F7F8;"></a>
+            </td>
+            <td valign="middle" style="padding:10px 12px 10px 0;">
+              <p style="margin:0 0 2px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.35;color:#1A1917;font-weight:700;"><a href="{{ event.extra.checkout_url }}" style="color:#1A1917;text-decoration:none;">{{ item.title }}</a></p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#6B675F;">Qty {{ item.quantity }} &nbsp;&middot;&nbsp; {{ item.line_price }}</p>
+            </td>
+          </tr>
+        </table>
+        {% endfor %}
+      </td></tr>
+
+      <!-- ============ 7. REPEAT PRIMARY CTA ============ -->
+      <tr><td class="px py" style="padding:36px 24px 40px;background:#FFFFFF;" align="center">
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ event.extra.checkout_url }}" style="height:48px;v-text-anchor:middle;width:280px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Complete my first order &rarr;</center></v:roundrect><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="{{ event.extra.checkout_url }}" style="background:#BF570A;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 32px;">Complete my first order &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+        <p style="margin:18px 0 0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#6B675F;">Prefer to keep looking? <a href="https://merinotech.ca/collections/all-women" style="color:#C16452;text-decoration:underline;">Women&rsquo;s</a> &nbsp;&middot;&nbsp; <a href="https://merinotech.ca/collections/all-men" style="color:#C16452;text-decoration:underline;">Men&rsquo;s</a></p>
+      </td></tr>
+
+      <!-- ============ 8. CLOSING — final objection removal (didn't fit? returns + size help) ============ -->
+      <tr><td class="px py" style="padding:30px 24px 36px;background:#F4F1EA;" align="center">
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.7;color:#5C5C5C;">Still on the fence? If it doesn&rsquo;t fit, <a href="https://merinotech.ca/pages/easy-free-returns-up-to-30-days" style="color:#C16452;text-decoration:underline;font-weight:700;">returns and exchanges are free</a> for 30 days &mdash; so your first order is genuinely risk-free. Need a hand with sizing? Check the <a href="https://merinotech.ca/pages/size-guide" style="color:#C16452;text-decoration:underline;font-weight:700;">size guide</a> or just reply to this email.</p>
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+</body></html>
