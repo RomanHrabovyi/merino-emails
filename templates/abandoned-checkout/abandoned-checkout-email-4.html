@@ -129,13 +129,7 @@
         <p style="margin:12px 0 0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#6B675F;">Prefer to keep looking? <a href="https://merinotech.ca/discount/{{ coupon_code|default:'WELCOME20' }}?redirect=/collections/all-women" style="color:#C16452;text-decoration:underline;">Women&rsquo;s</a> &nbsp;&middot;&nbsp; <a href="https://merinotech.ca/discount/{{ coupon_code|default:'WELCOME20' }}?redirect=/collections/all-men" style="color:#C16452;text-decoration:underline;">Men&rsquo;s</a></p>
       </td></tr>
 
-      <!-- ============ FOOTER — unsubscribe + organization details (Klaviyo tags left as-is) ============ -->
-      <tr><td class="px py" style="padding:32px 24px;background:#232323;" align="center">
-        <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#CFCFCF;">{{ organization.name }}<br>{{ organization.full_address }}</p>
-        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#CFCFCF;">You&rsquo;re receiving this because you started a checkout with us.<br>
-          <a href="{% unsubscribe %}" style="color:#CFCFCF;text-decoration:underline;">Unsubscribe</a>
-        </p>
-      </td></tr>
+      <!-- NO FOOTER — Roma adds the brand footer (logo, socials, unsubscribe, address) in Klaviyo. The template is body-only: hero → final CTA. -->
 
     </table>
     <!--[if mso]></td></tr></table><![endif]-->
