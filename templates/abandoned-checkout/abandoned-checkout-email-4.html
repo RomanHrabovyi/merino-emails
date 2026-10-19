@@ -7,7 +7,7 @@
 <title>{{ organization.name }}</title>
 <!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
 <!-- NOTE: Klaviyo HTML blocks strip <head>/<style>. This email renders correctly on INLINE styles alone; the media query below is a progressive enhancement only. -->
-<!-- SERIES: Abandoned Checkout #4 (FINAL) — Day 6, Smart Sending OFF. Segment: first-time buyers (Has Placed Order zero times). Angle: last touch + WELCOME gift — 20% off the first order (WELCOME20), framed as a warm welcome, NOT a "cart discount" (AIDA). Do not reuse #1 "cart saved", #2 "why merino" benefits, or #3 "size/fit" messaging. -->
+<!-- SERIES: Abandoned Checkout #4 (FINAL) — Day 6, Smart Sending OFF. Segment: first-time buyers (Has Placed Order zero times). Angle: last touch + WELCOME gift — 20% off the FIRST order (WELCOME20), framed as a warm welcome, NOT a "cart discount" (AIDA). Do not reuse #1 "cart saved", #2 "why merino" benefits, or #3 "size/fit" messaging. -->
 <style>
   @media only screen and (max-width:600px){
     .container{width:100%!important}
@@ -33,14 +33,14 @@
     <!--[if mso]><table role="presentation" width="600" cellpadding="0" cellspacing="0" align="center" style="width:600px;"><tr><td style="padding:0;"><![endif]-->
     <table role="presentation" class="container" width="100%" cellpadding="0" cellspacing="0" align="center" style="width:100%;max-width:600px;margin:0 auto;background:#FFFFFF;">
 
-      <!-- ============ 1. HERO — warm welcome + 20% offer teaser + primary CTA above the fold (AIDA: Attention/Interest) ============ -->
+      <!-- ============ 1. HERO — warm welcome + 20% teaser + primary CTA above the fold (AIDA: Attention / Interest) ============ -->
       <tr><td class="px py" style="padding:40px 24px;background:#F4F1EA;" align="center">
-        <!-- ЗАМІНИТИ / replace in Klaviyo: hero image — folded merino base layers, men's + women's, warm neutral styling, a small "welcome" feel (552px wide). Links back to the saved checkout. -->
+        <!-- ЗАМІНИТИ / replace in Klaviyo: hero image — folded merino base layers, for her + for him, warm neutral styling with a quiet "welcome" feel (552px wide). Links back to the saved checkout. -->
         <a href="{{ event.extra.checkout_url }}" style="text-decoration:none;"><img src="https://placehold.co/552x320/EFEAE0/9A948A?text=WELCOME+TO+MERINO" width="552" alt="Folded Merino.tech wool base layers for her and for him, ready to ship" style="display:block;width:100%;max-width:552px;border:0;border-radius:8px;margin-bottom:24px;"></a>
         <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#BF570A;font-weight:700;">Your welcome gift</p>
-        <h1 class="h1" style="text-align:center;margin:0 0 12px;font-family:Georgia,'Times New Roman',Times,serif;font-size:30px;line-height:1.2;color:#1A1917;font-weight:700;">A warm welcome, and 20% off</h1>
-        <p style="margin:0 0 26px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Hi {{ first_name|default:'there' }}, you&rsquo;re almost part of the Merino family &mdash; and a first order deserves a proper welcome. Here&rsquo;s 20% off to finish the one you started, our way of saying hello.</p>
-        <!-- PRIMARY CTA (single — resume checkout with the welcome offer) -->
+        <h1 class="h1" style="text-align:center;margin:0 0 12px;font-family:Georgia,'Times New Roman',Times,serif;font-size:30px;line-height:1.2;color:#1A1917;font-weight:700;">A warm welcome &mdash; and 20% off</h1>
+        <p style="margin:0 0 26px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Hi {{ first_name|default:'there' }}, you&rsquo;re one step from your first Merino piece &mdash; and a first order deserves a proper welcome. Here&rsquo;s 20% off to finish the one you started, our way of saying hello.</p>
+        <!-- PRIMARY CTA (single — resume the saved checkout; the welcome code is applied there) -->
         <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
           <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ event.extra.checkout_url }}" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#BF570A" fillcolor="#BF570A"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Finish with 20% off &rarr;</center></v:roundrect><![endif]-->
           <!--[if !mso]><!-- -->
@@ -113,7 +113,7 @@
         <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#9A948A;">Rated five stars by thousands of Canadians</p>
       </td></tr>
 
-      <!-- ============ 6. FINAL PUSH — soft last reminder (no false deadline) + repeat primary CTA with the code ============ -->
+      <!-- ============ 6. FINAL PUSH — soft last reminder (no false deadline) + repeat primary CTA with the code (AIDA: Action) ============ -->
       <tr><td class="px py" style="padding:40px 24px;background:#F4F1EA;border-top:1px solid #E3DED4;" align="center">
         <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#BF570A;font-weight:700;">One last note</p>
         <p style="margin:0 0 14px;font-family:Georgia,'Times New Roman',Times,serif;font-size:26px;line-height:1.25;color:#1A1917;font-weight:700;">Your welcome gift is waiting</p>
@@ -125,11 +125,17 @@
           <!--<![endif]-->
         </td></tr></table>
         <p style="margin:16px 0 0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#6B675F;">Use code <span style="color:#BF570A;font-weight:700;letter-spacing:1px;">{{ coupon_code|default:'WELCOME20' }}</span> at checkout.</p>
-        <!-- Storefront links are wrapped in a Shopify discount link so WELCOME20 auto-applies while browsing. The checkout CTAs above return to the saved checkout, where the code is entered or auto-applied by Klaviyo. -->
+        <!-- Storefront browse links are wrapped in a Shopify discount link so WELCOME20 auto-applies while browsing. The checkout CTAs above return to the saved checkout, where the code is entered/auto-applied by Klaviyo. -->
         <p style="margin:12px 0 0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#6B675F;">Prefer to keep looking? <a href="https://merinotech.ca/discount/{{ coupon_code|default:'WELCOME20' }}?redirect=/collections/all-women" style="color:#C16452;text-decoration:underline;">Women&rsquo;s</a> &nbsp;&middot;&nbsp; <a href="https://merinotech.ca/discount/{{ coupon_code|default:'WELCOME20' }}?redirect=/collections/all-men" style="color:#C16452;text-decoration:underline;">Men&rsquo;s</a></p>
       </td></tr>
 
-      <!-- NO FOOTER — Roma adds the brand footer (logo, socials, unsubscribe, address) in Klaviyo. The template is body-only: hero → final CTA. -->
+      <!-- ============ FOOTER — unsubscribe + organization details (Klaviyo tags left as-is). Requested for this final email. ============ -->
+      <tr><td class="px py" style="padding:32px 24px;background:#232323;" align="center">
+        <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#CFCFCF;">{{ organization.name }}<br>{{ organization.full_address }}</p>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#CFCFCF;">You&rsquo;re receiving this because you started a checkout with us.<br>
+          <a href="{% unsubscribe %}" style="color:#CFCFCF;text-decoration:underline;">Unsubscribe</a>
+        </p>
+      </td></tr>
 
     </table>
     <!--[if mso]></td></tr></table><![endif]-->
