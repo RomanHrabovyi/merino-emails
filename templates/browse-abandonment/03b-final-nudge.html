@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<title>{{ organization.name }}</title>
+<!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
+<!--
+  ============================================================
+  EMAIL: Browse Abandonment — Email 3B / Flow "Email #4" "Final nudge"
+  FLOW:  Browse Abandonment (3-email series), FINAL · Conditional Split
+         Path #2 = "Everyone else" (clicked at least one email in the
+         series — engaged, but didn't buy). Counterpart to 03A (Path #1,
+         zero clicks). TIMING: Day 4 (same step as 03A).
+  ANGLE: warm acknowledgement of their interest + confidence/trust to help
+         them DECIDE. They've already seen the value pitch (L2), so lean on
+         reassurance, not re-education. Framework: AIDA (soft). NO DISCOUNT
+         (premium stance — no perk/coupon in this branch).
+  MARKET: Canada (merinotech.ca) · copy in English.
+
+  SUBJECT LINES (3 — pick/test; keep out of the body):
+    1. Curiosity:    Need a hand deciding?
+    2. Trust/benefit: You've got great taste
+    3. Direct:       Ready when you are
+
+  >>> PLACEHOLDERS TO REPLACE <<<
+    - Logo (topbar): replace with the real Merino.tech CA logo (~150px).
+    - Hero image: replace the full-width lifestyle banner.
+    - "Worth a second look" products: replace the static 3-up grid with a
+      Klaviyo product-feed / recommendations block — see the block comment.
+    - Free shipping threshold: visible copy shows "CAD $65" — confirm/replace.
+    - Rating / "10,000+ customers" / review quote + name: samples — replace
+      with live Judge.me figures and a real review.
+    - Footer social icons + links: replace with real profiles.
+  ============================================================
+-->
+<style>
+  @media only screen and (max-width:600px){
+    .container{width:100%!important}
+    .px{padding-left:20px!important;padding-right:20px!important}
+    .py{padding-top:24px!important;padding-bottom:24px!important}
+    .stack{display:block!important;width:100%!important;padding-left:0!important;padding-right:0!important}
+    .h1{font-size:26px!important}
+  }
+  a{color:#C16452;text-decoration:underline}
+</style>
+</head>
+<body style="margin:0;padding:0;background:#EFEAE0;">
+
+<!-- 1. PREHEADER (hidden) — complements the subject, does not repeat it -->
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all;">Still thinking it over? Here&rsquo;s a little help deciding.</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#EFEAE0;">
+  <tr><td align="center" style="padding:24px 12px;">
+    <!-- MSO ghost table: pins Outlook to 600px; the real container stays fluid -->
+    <!--[if mso]><table role="presentation" width="600" cellpadding="0" cellspacing="0" align="center" style="width:600px;"><tr><td style="padding:0;"><![endif]-->
+    <table role="presentation" class="container" width="100%" cellpadding="0" cellspacing="0" align="center" style="width:100%;max-width:600px;margin:0 auto;background:#FFFFFF;">
+
+      <!-- ============ 2. TOPBAR — centered logo on bone + thin divider ============ -->
+      <tr><td align="center" class="px" style="padding:22px 24px 18px;background:#F4F1EA;border-bottom:1px solid #E3DED4;">
+        <!-- ЗАМІНИТИ / replace: real Merino.tech CA logo (~150px wide) -->
+        <a href="https://merinotech.ca" style="text-decoration:none;"><img src="https://placehold.co/150x34/F4F1EA/1A1917?text=MERINO.TECH" width="150" height="34" alt="Merino.tech" style="display:block;width:150px;max-width:150px;height:auto;border:0;"></a>
+      </td></tr>
+
+      <!-- ============ 3. HERO — full-width lifestyle banner + warm "help you decide" text + CTA ============ -->
+      <tr><td style="padding:0;background:#FFFFFF;" align="center">
+        <!-- ЗАМІНИТИ / replace: full-width lifestyle hero banner (600x340) -->
+        <a href="https://merinotech.ca/collections/all" style="text-decoration:none;"><img src="https://placehold.co/600x340/EFEAE0/9A948A?text=FOUND+YOUR+FAVOURITE%3F" width="600" height="340" alt="Merino.tech wool layers, styled for everyday" style="display:block;width:100%;max-width:600px;height:auto;border:0;"></a>
+      </td></tr>
+      <tr><td class="px py" style="padding:34px 24px 36px;background:#F4F1EA;" align="center">
+        <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#BF570A;font-weight:700;">A little help deciding</p>
+        <h1 class="h1" style="text-align:center;margin:0 0 12px;font-family:Georgia,'Times New Roman',Times,serif;font-size:30px;line-height:1.2;color:#1A1917;font-weight:700;">You&rsquo;ve got great taste, {{ first_name|default:'there' }}</h1>
+        <p style="margin:0 0 24px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">You liked what you saw &mdash; we noticed. If you&rsquo;re still weighing it up, here&rsquo;s everything you need to choose with confidence. No pressure, no rush.</p>
+        <!-- PRIMARY CTA (dark, bulletproof) -->
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/all" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Find your favourite &rarr;</center></v:roundrect><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="https://merinotech.ca/collections/all" style="background:#232323;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 34px;">Find your favourite &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+      <!-- ============ 4. WORTH A SECOND LOOK — curated picks (product-feed) ============ -->
+      <!-- >>> ROMA — replace this STATIC 3-up grid with a Klaviyo product-feed / recommendations block
+           (e.g. recently viewed, or your bestsellers), keeping each card's image + title + "View" linked
+           to that product's URL:
+             {% catalog item in catalog.trending %} ... {{ item.title }} / {{ item.featured_image.full }} /
+             {{ item.price }} / {{ item.url }} ... {% endcatalog %} -->
+      <tr><td class="px" style="padding:36px 24px 4px;background:#FFFFFF;" align="center">
+        <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#C16452;font-weight:700;">Still on your list</p>
+        <h2 style="text-align:center;margin:0;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">Worth a second look</h2>
+      </td></tr>
+      <tr><td class="px" style="padding:22px 24px 8px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="stack" valign="top" width="33.33%" style="width:33.33%;padding:0 8px 20px;" align="center">
+              <!-- ЗАМІНИТИ / replace with product-feed item 1 (image + title + price + url) -->
+              <a href="https://merinotech.ca/collections/all" style="text-decoration:none;"><img src="https://placehold.co/170x200/F7F7F8/9A948A?text=PICK+1" width="170" height="200" alt="Merino Crew Base Layer" style="display:block;width:100%;max-width:170px;height:auto;border:0;border-radius:6px;margin:0 auto 8px;"></a>
+              <p style="margin:0 0 2px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.35;color:#1A1917;font-weight:700;">Merino Crew Base Layer</p>
+              <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#5C5C5C;">$119.00</p>
+              <a href="https://merinotech.ca/collections/all" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#BF570A;text-decoration:underline;font-weight:700;">View &rarr;</a>
+            </td>
+            <td class="stack" valign="top" width="33.33%" style="width:33.33%;padding:0 8px 20px;" align="center">
+              <!-- ЗАМІНИТИ / replace with product-feed item 2 -->
+              <a href="https://merinotech.ca/collections/all" style="text-decoration:none;"><img src="https://placehold.co/170x200/F7F7F8/9A948A?text=PICK+2" width="170" height="200" alt="Merino Long-Sleeve Top" style="display:block;width:100%;max-width:170px;height:auto;border:0;border-radius:6px;margin:0 auto 8px;"></a>
+              <p style="margin:0 0 2px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.35;color:#1A1917;font-weight:700;">Merino Long-Sleeve Top</p>
+              <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#5C5C5C;">$129.00</p>
+              <a href="https://merinotech.ca/collections/all" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#BF570A;text-decoration:underline;font-weight:700;">View &rarr;</a>
+            </td>
+            <td class="stack" valign="top" width="33.33%" style="width:33.33%;padding:0 8px 20px;" align="center">
+              <!-- ЗАМІНИТИ / replace with product-feed item 3 -->
+              <a href="https://merinotech.ca/collections/all" style="text-decoration:none;"><img src="https://placehold.co/170x200/F7F7F8/9A948A?text=PICK+3" width="170" height="200" alt="Merino Base Layer Set" style="display:block;width:100%;max-width:170px;height:auto;border:0;border-radius:6px;margin:0 auto 8px;"></a>
+              <p style="margin:0 0 2px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.35;color:#1A1917;font-weight:700;">Merino Base Layer Set</p>
+              <p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#5C5C5C;">$199.00</p>
+              <a href="https://merinotech.ca/collections/all" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#BF570A;text-decoration:underline;font-weight:700;">View &rarr;</a>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ============ 5. CONFIDENCE — one strong review (dark testimonial band) ============ -->
+      <tr><td class="px py" style="padding:36px 24px;background:#232323;" align="center">
+        <p style="margin:0 0 12px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;line-height:1;letter-spacing:3px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <!-- replace in Klaviyo: live Judge.me review + name; 4.8 / 10,000+ are samples -->
+        <p style="margin:0 0 12px;font-family:Georgia,'Times New Roman',Times,serif;font-size:20px;line-height:1.5;color:#FFFFFF;font-style:italic;">&ldquo;I went back and forth for a week, then finally ordered. Only regret is not doing it sooner &mdash; I wear it almost every day.&rdquo;</p>
+        <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#CFCFCF;">&mdash; Taylor M., verified buyer</p>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#9A948A;">Rated 4.8 by 10,000+ customers</p>
+      </td></tr>
+
+      <!-- ============ 6. RISK REMOVAL — reassurance strip + sizing help (bone) ============ -->
+      <tr><td class="px" style="padding:26px 24px 6px;background:#F4F1EA;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td class="stack" width="33.33%" valign="top" style="padding:6px 8px;" align="center">
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5;color:#5C5C5C;"><span style="color:#1A1917;font-weight:700;">30-day returns</span><br><a href="https://merinotech.ca/pages/easy-free-returns-up-to-30-days" style="color:#C16452;text-decoration:underline;">free &amp; easy</a></p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:6px 8px;" align="center">
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5;color:#5C5C5C;"><span style="color:#1A1917;font-weight:700;">Free size exchange</span><br>swap for another size</p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:6px 8px;" align="center">
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5;color:#5C5C5C;"><span style="color:#1A1917;font-weight:700;">Free shipping</span><br>over CAD&nbsp;$65</p>
+          </td>
+        </tr></table>
+      </td></tr>
+      <tr><td class="px" style="padding:6px 24px 26px;background:#F4F1EA;" align="center">
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#6B675F;">Unsure of your size? The <a href="https://merinotech.ca/pages/size-guide" style="color:#C16452;text-decoration:underline;font-weight:700;">size guide</a> has exact measurements.</p>
+      </td></tr>
+
+      <!-- ============ 7. REPEAT PRIMARY CTA — final (end of series) ============ -->
+      <tr><td class="px py" style="padding:34px 24px 40px;background:#FFFFFF;" align="center">
+        <p style="margin:0 0 18px;font-family:Georgia,'Times New Roman',Times,serif;font-size:19px;line-height:1.5;color:#1A1917;">Take your time &mdash; and when you&rsquo;re ready, we&rsquo;ll be right here.</p>
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/all" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Find your favourite &rarr;</center></v:roundrect><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="https://merinotech.ca/collections/all" style="background:#232323;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 34px;">Find your favourite &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+        <p style="margin:14px 0 0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#6B675F;">Shop <a href="https://merinotech.ca/collections/all-women" style="color:#C16452;text-decoration:underline;">Women&rsquo;s</a> &nbsp;&middot;&nbsp; <a href="https://merinotech.ca/collections/all-men" style="color:#C16452;text-decoration:underline;">Men&rsquo;s</a></p>
+      </td></tr>
+
+      <!-- ============ 8. FOOTER — dark section: org + social + unsubscribe ============ -->
+      <tr><td class="px" style="padding:30px 24px;background:#232323;" align="center">
+        <!-- ЗАМІНИТИ / replace: social icons + real profile links -->
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 14px;"><tr>
+          <td style="padding:0 6px;"><a href="https://instagram.com/" style="text-decoration:none;"><img src="https://placehold.co/24x24/232323/CFCFCF?text=IG" width="24" height="24" alt="Instagram" style="display:block;width:24px;height:24px;border:0;"></a></td>
+          <td style="padding:0 6px;"><a href="https://facebook.com/" style="text-decoration:none;"><img src="https://placehold.co/24x24/232323/CFCFCF?text=FB" width="24" height="24" alt="Facebook" style="display:block;width:24px;height:24px;border:0;"></a></td>
+          <td style="padding:0 6px;"><a href="https://tiktok.com/" style="text-decoration:none;"><img src="https://placehold.co/24x24/232323/CFCFCF?text=TT" width="24" height="24" alt="TikTok" style="display:block;width:24px;height:24px;border:0;"></a></td>
+        </tr></table>
+        <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#CFCFCF;">{{ organization.name }}<br>{{ organization.full_address }}</p>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#CFCFCF;">You&rsquo;re receiving this because you visited us at merinotech.ca.<br>
+          <a href="{% unsubscribe %}" style="color:#CFCFCF;text-decoration:underline;">Unsubscribe</a>
+        </p>
+      </td></tr>
+
+    </table>
+    <!--[if mso]></td></tr></table><![endif]-->
+  </td></tr>
+</table>
+</body></html>
