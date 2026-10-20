@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<title>{{ organization.name }}</title>
+<!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
+<!--
+  ============================================================
+  EMAIL: Browse Abandonment — Email 3A "Final nudge (strong)"
+  FLOW:  Browse Abandonment (3-email series), FINAL · Conditional Split
+         Path #1 = did NOT click any email in the series (opened L1/L2,
+         interest never converted). Strongest nudge of the flow.
+  TIMING: +48–72 hours after email 2.
+  ANGLE: social proof — "what everyone else picks first" — plus honest,
+         light urgency (last look). Framework: AIDA. NO DISCOUNT.
+  MARKET: Canada (merinotech.ca) · copy in English.
+
+  SUBJECT LINES (3 — pick/test; keep out of the body):
+    1. Curiosity:    Why everyone starts here
+    2. Social proof: What everyone picks first
+    3. Direct:       Your last look at merino
+
+  >>> PLACEHOLDERS TO REPLACE <<<
+    - Bestsellers block (HERO, active by default): replace the static 3-up
+      grid with a Klaviyo product-feed / recommendations block — see the
+      block comment.
+    - Viewed Product block (ALTERNATIVE, commented out): un-comment to lead
+      with the exact PDP the visitor viewed instead of bestsellers; map the
+      Klaviyo "Viewed Product" event fields — see that block comment.
+    - Free shipping threshold: visible copy shows "CAD $65" (current store
+      threshold) — confirm/replace if it changes.
+    - Rating / "10,000+ customers": samples — replace with live figures.
+    - All images are placehold.co placeholders — swap for real assets.
+  ============================================================
+-->
+<style>
+  @media only screen and (max-width:600px){
+    .container{width:100%!important}
+    .px{padding-left:20px!important;padding-right:20px!important}
+    .py{padding-top:24px!important;padding-bottom:24px!important}
+    .stack{display:block!important;width:100%!important;padding-left:0!important;padding-right:0!important}
+    .h1{font-size:26px!important}
+  }
+  a{color:#C16452;text-decoration:underline}
+</style>
+</head>
+<body style="margin:0;padding:0;background:#EFEAE0;">
+
+<!-- PREHEADER (hidden) — complements the subject, does not repeat it -->
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all;">What 10,000+ customers reach for first.</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#EFEAE0;">
+  <tr><td align="center" style="padding:24px 12px;">
+    <!-- MSO ghost table: pins Outlook to 600px; the real container stays fluid -->
+    <!--[if mso]><table role="presentation" width="600" cellpadding="0" cellspacing="0" align="center" style="width:600px;"><tr><td style="padding:0;"><![endif]-->
+    <table role="presentation" class="container" width="100%" cellpadding="0" cellspacing="0" align="center" style="width:100%;max-width:600px;margin:0 auto;background:#FFFFFF;">
+
+      <!-- ============ 1. HERO — social proof headline (AIDA: Attention/Interest) ============ -->
+      <tr><td class="px py" style="padding:40px 24px 24px;background:#F4F1EA;" align="center">
+        <p style="margin:0 0 10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#BF570A;font-weight:700;">What everyone picks first</p>
+        <h1 class="h1" style="text-align:center;margin:0 0 12px;font-family:Georgia,'Times New Roman',Times,serif;font-size:30px;line-height:1.2;color:#1A1917;font-weight:700;">Still deciding, {{ first_name|default:'there' }}?<br>Here&rsquo;s what everyone else picks first</h1>
+        <!-- Social proof is the main lever — "10,000+" is a sample, replace with the live figure -->
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Join 10,000+ customers who made merino their everyday default.</p>
+      </td></tr>
+
+      <!-- ============ 2. HERO PRODUCTS — BESTSELLERS (active by default) ============ -->
+      <!-- >>> ROMA — this bestsellers grid is the ACTIVE hero block for this email (social-proof angle,
+           because the visitor didn't click). Replace the STATIC 3-up grid below with a Klaviyo
+           product-feed / recommendations block, e.g.:
+             {% catalog item in catalog.trending %} ... {{ item.title }} / {{ item.featured_image.full }} /
+             {{ item.price }} / {{ item.url }} ... {% endcatalog %}
+           Keep each card's image + title linked to that product's URL.
+           To lead with the viewed product INSTEAD, un-comment the "ALTERNATIVE" block further down. -->
+      <tr><td class="px" style="padding:30px 24px 4px;background:#FFFFFF;" align="center">
+        <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#C16452;font-weight:700;">Customer favourites</p>
+        <h2 style="text-align:center;margin:0;font-family:Georgia,'Times New Roman',Times,serif;font-size:22px;line-height:1.3;color:#1A1917;font-weight:700;">The ones they reach for first</h2>
+      </td></tr>
+      <tr><td class="px" style="padding:20px 24px 4px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="stack" valign="top" width="33.33%" style="width:33.33%;padding:0 8px 18px;" align="center">
+              <!-- ЗАМІНИТИ / replace with product-feed item 1 (image + title + price + url) -->
+              <a href="https://merinotech.ca/collections/all" style="text-decoration:none;"><img src="https://placehold.co/170x200/F7F7F8/9A948A?text=BESTSELLER+1" width="170" alt="Merino bestseller — crew base layer" style="display:block;width:100%;max-width:170px;border:0;border-radius:6px;margin:0 auto 8px;"></a>
+              <p style="margin:0 0 2px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.4;color:#1A1917;font-weight:700;">Merino Crew Base Layer</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:1;letter-spacing:1px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            </td>
+            <td class="stack" valign="top" width="33.33%" style="width:33.33%;padding:0 8px 18px;" align="center">
+              <!-- ЗАМІНИТИ / replace with product-feed item 2 -->
+              <a href="https://merinotech.ca/collections/all" style="text-decoration:none;"><img src="https://placehold.co/170x200/F7F7F8/9A948A?text=BESTSELLER+2" width="170" alt="Merino bestseller — long-sleeve top" style="display:block;width:100%;max-width:170px;border:0;border-radius:6px;margin:0 auto 8px;"></a>
+              <p style="margin:0 0 2px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.4;color:#1A1917;font-weight:700;">Merino Long-Sleeve Top</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:1;letter-spacing:1px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            </td>
+            <td class="stack" valign="top" width="33.33%" style="width:33.33%;padding:0 8px 18px;" align="center">
+              <!-- ЗАМІНИТИ / replace with product-feed item 3 -->
+              <a href="https://merinotech.ca/collections/all" style="text-decoration:none;"><img src="https://placehold.co/170x200/F7F7F8/9A948A?text=BESTSELLER+3" width="170" alt="Merino bestseller — base layer set" style="display:block;width:100%;max-width:170px;border:0;border-radius:6px;margin:0 auto 8px;"></a>
+              <p style="margin:0 0 2px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.4;color:#1A1917;font-weight:700;">Merino Base Layer Set</p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:1;letter-spacing:1px;color:#F2D300;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ============ 2-ALT. VIEWED PRODUCT — alternative hero (COMMENTED OUT by default) ============ -->
+      <!-- >>> ROMA — to lead with the exact product the visitor viewed INSTEAD of bestsellers,
+           delete the bestsellers block above and un-comment this one. Map the Klaviyo
+           "Viewed Product" event fields: {{ event.URL }} / {{ event.ImageURL }} /
+           {{ event.ProductName }} / {{ event.Price }} (image + CTA deep-link to the viewed PDP).
+      <tr><td class="px" style="padding:20px 24px 4px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E3DED4;border-radius:8px;">
+          <tr>
+            <td valign="middle" width="120" style="width:120px;padding:12px;">
+              <a href="{{ event.URL }}" style="text-decoration:none;"><img src="https://placehold.co/96x96/F7F7F8/9A948A?text=VIEWED" width="96" alt="{{ event.ProductName|default:'The piece you viewed' }}" style="display:block;width:96px;max-width:96px;border:0;border-radius:6px;background:#F7F7F8;"></a>
+            </td>
+            <td valign="middle" style="padding:12px 16px 12px 0;">
+              <p style="margin:0 0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.35;color:#1A1917;font-weight:700;"><a href="{{ event.URL }}" style="color:#1A1917;text-decoration:none;">{{ event.ProductName|default:'The piece you viewed' }}</a></p>
+              <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5;color:#5C5C5C;">{{ event.Price|default:'' }}</p>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+      -->
+
+      <!-- ============ 3. PRIMARY CTA — dark button (AIDA: Action) ============ -->
+      <tr><td class="px" style="padding:12px 24px 36px;background:#FFFFFF;" align="center">
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/all" style="height:48px;v-text-anchor:middle;width:220px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Find your set &rarr;</center></v:roundrect><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="https://merinotech.ca/collections/all" style="background:#232323;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 36px;">Find your set &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+        <p style="margin:14px 0 0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#6B675F;">Shop <a href="https://merinotech.ca/collections/all-women" style="color:#C16452;text-decoration:underline;">Women&rsquo;s</a> &nbsp;&middot;&nbsp; <a href="https://merinotech.ca/collections/all-men" style="color:#C16452;text-decoration:underline;">Men&rsquo;s</a></p>
+      </td></tr>
+
+      <!-- ============ 4. HONEST LIGHT URGENCY — last look, no fake timers ============ -->
+      <tr><td class="px py" style="padding:32px 24px;background:#F4F1EA;" align="center">
+        <p style="margin:0;font-family:Georgia,'Times New Roman',Times,serif;font-size:19px;line-height:1.55;color:#1A1917;">This is the last we&rsquo;ll point you back to it. If merino&rsquo;s been on your mind, now&rsquo;s a good moment for one more look.</p>
+      </td></tr>
+
+      <!-- ============ 5. RISK REMOVAL — final reassurance ============ -->
+      <tr><td class="px" style="padding:30px 24px 10px;background:#FFFFFF;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td class="stack" width="33.33%" valign="top" style="padding:8px;" align="center">
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5;color:#5C5C5C;"><span style="color:#1A1917;font-weight:700;">30-day returns</span><br><a href="https://merinotech.ca/pages/easy-free-returns-up-to-30-days" style="color:#C16452;text-decoration:underline;">free &amp; easy</a></p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:8px;" align="center">
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5;color:#5C5C5C;"><span style="color:#1A1917;font-weight:700;">Free size exchange</span><br>swap for another size</p>
+          </td>
+          <td class="stack" width="33.33%" valign="top" style="padding:8px;" align="center">
+            <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5;color:#5C5C5C;"><span style="color:#1A1917;font-weight:700;">Free shipping</span><br>over CAD&nbsp;$65</p>
+          </td>
+        </tr></table>
+      </td></tr>
+
+      <!-- ============ 6. REPEAT PRIMARY CTA — final (long email, end of series) ============ -->
+      <tr><td class="px" style="padding:18px 24px 40px;background:#FFFFFF;" align="center">
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#232323" style="border-radius:4px;">
+          <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://merinotech.ca/collections/all" style="height:48px;v-text-anchor:middle;width:220px;" arcsize="8%" strokecolor="#232323" fillcolor="#232323"><w:anchorlock/><center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Find your set &rarr;</center></v:roundrect><![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="https://merinotech.ca/collections/all" style="background:#232323;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:48px;text-align:center;text-decoration:none;padding:0 36px;">Find your set &rarr;</a>
+          <!--<![endif]-->
+        </td></tr></table>
+      </td></tr>
+
+      <!-- ============ 7. FOOTER — org details + unsubscribe ============ -->
+      <tr><td class="px" style="padding:30px 24px;background:#232323;" align="center">
+        <p style="margin:0 0 8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#CFCFCF;">{{ organization.name }}<br>{{ organization.full_address }}</p>
+        <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#CFCFCF;">You&rsquo;re receiving this because you visited us at merinotech.ca.<br>
+          <a href="{% unsubscribe %}" style="color:#CFCFCF;text-decoration:underline;">Unsubscribe</a>
+        </p>
+      </td></tr>
+
+    </table>
+    <!--[if mso]></td></tr></table><![endif]-->
+  </td></tr>
+</table>
+</body></html>
