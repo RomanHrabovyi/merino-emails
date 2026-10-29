@@ -40,6 +40,7 @@ description: Email design system для Merino.tech CA (merinotech.ca). Вико
   - Жодних фіксованих піксельних ширин, що можуть вилізти на моб.: багатоколонкові ряди роби на **відсоткових комірках** (`width:50%`/`33.33%`), зображення — `width:100%;max-width:…`.
   - Парні кнопки (women/men, socks/beanies) — **fluid**: комірка `width:50%`, сам `<a>` з `display:block` (заповнює комірку), VML-ширину лишати лише для Outlook. Так вони стискаються на моб. без overflow, навіть коли media-query вирізано.
   - `<style>`-блок з media-query лишати можна (працює в Apple Mail / Gmail app як покращення), але **верстка не повинна від нього залежати**.
+  - ⚠️ **Елементи з Klaviyo-тегом — завжди `word-break:break-word;overflow-wrap:break-word`** (інлайн). Тег `{{ first_name|default:'there' }}`, `{{ coupon_code|default:'...' }}` тощо — це суцільний рядок без пробілів; у прев'ю Klaviyo (і при довгому реальному значенні) він НЕ переноситься й розпирає лист за межі екрана на мобільному. Став перенос на H1/H2 із тегом, на чип коду купона, на будь-який текст із тегом. Перевірено рендером: без цього лист ~388px замість 375px і дає горизонтальний скрол.
 - **Без зовнішньої «канви» — блоки на всю ширину.** Не роби бежеву рамку навколо листа: `body` і зовнішню таблицю-обгортку — `background:#FFFFFF`, у зовнішній комірці `padding:0` (не `24px 12px`). Контейнер лишається `width:100%;max-width:600px`. Так у Klaviyo немає сірих/бежевих смуг з боків. Кольорові фони (bone, dark, акценти) застосовуй **всередині секцій** (повноширинні смуги), а не як зовнішню рамку.
 - **Заголовки — по центру.** Усі `H1`/`H2` центруй **інлайн**: `text-align:center` прямо в `style` заголовка (не покладайся лише на `align="center"` комірки, бо Klaviyo ріже частину). Стосується всіх секцій і на світлому, і на темному фоні.
 - **Останній блок — не чорний.** Фінальну секцію листа (closing / повтор CTA — те, чим лист закінчується) **не роби на темному фоні** (`#232323`/`#000000`). Завершуй на світлому — `#FFFFFF` або bone `#F4F1EA` — з ink/body-текстом (`#1A1917`/`#5C5C5C`). Темні смуги використовуй лише для **проміжних** секцій (offer-акцент, grid-хедер), а не як кінцівку листа. Rust-CTA лишається rust на світлому фоні.
@@ -128,21 +129,24 @@ CTA padding:     14px 32px
 <!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
 <style>
   @media only screen and (max-width:600px){
-    .container{width:100%!important}
+    .container{width:100%!important;max-width:100%!important}
     .px{padding-left:20px!important;padding-right:20px!important}
     .py{padding-top:24px!important;padding-bottom:24px!important}
     .stack{display:block!important;width:100%!important}
     .h1{font-size:26px!important}
+    img{max-width:100%!important;height:auto!important}
   }
   a{color:#C16452;text-decoration:underline}
 </style>
 </head>
-<body style="margin:0;padding:0;background:#EFEAE0;">
+<body style="margin:0;padding:0;background:#FFFFFF;">
 <!-- PREHEADER -->
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;">PREHEADER 40–90 символів, доповнює сабджект.</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#EFEAE0;">
-  <tr><td align="center" style="padding:24px 12px;">
-    <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:600px;background:#FFFFFF;">
+<!-- БЕЗ зовнішньої канви: outer bg #FFFFFF, padding:0 (жодних бежевих смуг з боків у Klaviyo) -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFFFFF;">
+  <tr><td align="center" style="padding:0;">
+    <!-- контейнер гумовий: width:100%;max-width:600px (НЕ фіксований 600px) — інакше вилазить за межі колонки Klaviyo на мобільному -->
+    <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#FFFFFF;">
       <!-- СЮДИ БЛОКИ -->
     </table>
   </td></tr>
@@ -162,8 +166,9 @@ CTA padding:     14px 32px
 ```html
 <tr><td class="px py" style="padding:40px 24px;background:#F4F1EA;" align="center">
   <!-- ЗАМІНИТИ: hero-зображення продукту 552px wide -->
-  <img src="https://placehold.co/552x320/EFEAE0/9A948A?text=HERO" width="552" alt="опис" style="display:block;width:100%;max-width:552px;border:0;border-radius:8px;margin-bottom:24px;">
-  <h1 class="h1" style="margin:0 0 12px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:30px;line-height:1.2;color:#1A1917;font-weight:700;">Hero-заголовок</h1>
+  <img src="https://placehold.co/552x320/EFEAE0/9A948A?text=HERO" width="552" alt="опис" style="display:block;width:100%;max-width:100%;height:auto;border:0;border-radius:8px;margin-bottom:24px;">
+  <!-- word-break обовʼязково, якщо в заголовку є Klaviyo-тег ({{ first_name }}) -->
+  <h1 class="h1" style="margin:0 0 12px;font-family:Georgia,'Times New Roman',Times,serif;font-size:30px;line-height:1.2;color:#1A1917;font-weight:700;text-align:center;word-break:break-word;overflow-wrap:break-word;">Hero-заголовок</h1>
   <p style="margin:0 0 24px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#5C5C5C;">Підзаголовок — головна вигода в один-два рядки.</p>
   <!-- CTA-кнопку встав сюди (компонент 4) -->
 </td></tr>
@@ -233,7 +238,7 @@ CTA padding:     14px 32px
   <p style="margin:0 0 18px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#CFCFCF;">your first order. Apply the code at checkout:</p>
   <!-- CODE CHIP (прибрати, якщо знижка без коду / автоматична) -->
   <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 22px;"><tr><td style="border:2px dashed #E8965A;border-radius:6px;padding:12px 28px;" align="center">
-    <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;letter-spacing:3px;color:#FFFFFF;font-weight:700;">{{ coupon_code|default:'WELCOME20' }}</span>
+    <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;letter-spacing:3px;color:#FFFFFF;font-weight:700;word-break:break-word;overflow-wrap:break-word;">{{ coupon_code|default:'WELCOME20' }}</span>
   </td></tr></table>
   <!-- CTA (rust, bulletproof — компонент 4) -->
   <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td align="center" bgcolor="#BF570A" style="border-radius:4px;">
@@ -246,8 +251,10 @@ CTA padding:     14px 32px
 ```
 
 ## Чекліст перед віддачею
-- [ ] 600px контейнер, канва #EFEAE0 ззовні
-- [ ] Всі стилі інлайн; media-query лише для моб-правок
+- [ ] Контейнер гумовий: `width:100%;max-width:600px` (НЕ фіксований `600px`); outer bg `#FFFFFF`, `padding:0` (без зовнішньої канви)
+- [ ] ⚠️ Кожен елемент із Klaviyo-тегом (H1 `{{ first_name }}`, чип `{{ coupon_code }}`, будь-який текст із тегом) має `word-break:break-word;overflow-wrap:break-word` — інакше тег розпирає лист за межі на мобільному (перевірено: ~388px замість 375px)
+- [ ] Зображення гумові: `width:100%;max-width:…;height:auto` — ніколи голий фіксований px
+- [ ] Всі стилі інлайн; верстка не залежить від media-query (Klaviyo ріже `<head>`)
 - [ ] Один головний CTA (повторити у довгому листі)
 - [ ] Preheader заповнений, не дублює сабджект
 - [ ] Всі зображення мають alt і позначку `ЗАМІНИТИ`
